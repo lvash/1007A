@@ -1,4 +1,4 @@
-##BIOL1007A: Reproducibility in R
+## BIOL1007A: Reproducibility in R. 
 ## W23
 
 Reproducibility is essential at all stages of research and allows for the validation and replication of science, enhancing collaborations and connectivity. The open-source nature of R programming and its ability to analyze and visualize data sets make it a powerful tool in biology. In this course, we will learn the basics of reproducible coding in R and RStudio (no prior knowledge required). Primarily, we will cover: 
