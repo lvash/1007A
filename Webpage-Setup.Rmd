@@ -1,5 +1,5 @@
 ---
-title: "Lecture 1"
+title: "Setting up a GitHub page"
 author: "Lauren V. Ash"
 date: "`r Sys.Date()`"
 output: html_document
@@ -7,6 +7,8 @@ output: html_document
 
 ## Preparing for Class
 1. Download git here: https://git-scm.com/downloads
+  * Mac users will have to install `homebrew` first by copying and pasting this code into Terminal: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
+  * Then copy and paste this code into Terminal: `brew install git`. 
 2. Restart RStudio if it was open
 
 

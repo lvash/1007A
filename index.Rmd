@@ -95,7 +95,8 @@ January 12 | [Lecture Notes]() | [Assignment Page]()
 
 **Resources:**
 
-* [Downloading git](https://git-scm.com/downloads)
+* [Downloading git](https://git-scm.com/downloads)  
+* [git and GitHub notes](Webpage-Setup.html)
 
 
 <div id='id-section3'/>
