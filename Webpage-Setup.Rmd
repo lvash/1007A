@@ -1,0 +1,36 @@
+---
+title: "Lecture 1"
+author: "Lauren V. Ash"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Preparing for Class
+1. Download git here: https://git-scm.com/downloads
+2. Restart RStudio if it was open
+
+
+## In Class
+
+1. Generate a Personal Access Token (PAT)  
+
+  * Go to github.com and sign in   
+  * Click your profile icon on the upper right corner (next to bell and + signs)  
+  * Go to Settings  
+  * On the left side of the screen, scroll all the way down and choose Developer settings  
+  * On the left, click Personal access tokens and choose Tokens (classic)  
+  * Click Generate new token and **choose the Classic option**  
+  * Write "BIOL1007A" for the Note   
+  * Under Expiration, choose Custom - and set the expiration date to 12/31/2023   
+  * Click the repo check box (first one under select scopes) and it will select all of the sub boxes   
+  * Scroll down and select Generate token  
+  * **Copy the entire token number it generates** and save it somewhere - either in a document or note or email it to yourself  
+  
+2. Install the `credentials` package by typing this in the console: `install.packages("credentials")`  
+
+3. Run this code:
+```
+git config --global user.email "put github email here"
+git config --global user.name "put your name here"
+credentials::set_github_pat("put PAT here")
+```

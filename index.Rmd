@@ -62,7 +62,7 @@ January 12 | [Lecture Notes]() | [Assignment Page]()
 
 **Resources:**
 
-* [Downloading git]()  
+* [Downloading git](https://git-scm.com/downloads)
 
 
 <div id='id-section3'/>
@@ -78,7 +78,7 @@ January 19 | [Lecture Notes]() | [Assignment Page]()
 
 **Resources:**
 
-* [Colors in R]()  
+* [TBA]()  
 
 
 
