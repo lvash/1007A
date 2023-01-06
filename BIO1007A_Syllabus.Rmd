@@ -1,0 +1,80 @@
+---
+title: 'BIO 1007A: Reproducible Biology in R'
+author: "Winter 2023"
+output:
+  html_document:
+    highlight: kate
+    theme: yeti
+  pdf_document: default
+fontsize: 14
+editor_options:
+  chunk_output_type: console
+---
+
+## Meetings
+**Days:** Mondays, Tuesdays, Thursdays  
+**Time:**  1:00 - 4:00 PM     
+**Location:** MBH 303  
+**Course Website:** https://lvash.github.io/BIOL1007A  
+
+
+## Professor Information
+### Dr. Lauren Ash  
+**Office:** MBH 433    
+**Email:** lash@middlebury.edu  
+**Office hours:** After each class and by appointment (in person or virtual)
+
+
+## Pre-Requisites 
+- Completion of BIOL 140 (Ecology & Evolution) or BIOL 145 (Cell Biology & Genetics)
+- No prior knowledge of computer programming is required
+
+## Course Content
+Reproducibility is essential at all stages of research and allows for the validation and replication of science, enhancing collaborations and connectivity. The open-source nature of R programming and its ability to analyze and visualize data sets make it a powerful tool in biology. In this course, we will learn the basics of reproducible coding in R and RStudio (no prior knowledge required). Primarily, we will cover: 
+
+1) Data structures and creating publication-quality figures; 
+2) How to ask and answer scientific questions using basic statistics; 
+3) Creating shareable documents using Rmarkdown; and 
+4) Reproducibility using GitHub, shell commands, and LaTeX - all within RStudio. 
+
+Each week will involve a combination of structured lecture, group work, and coding exercises.
+
+
+## Lecture Activities
+The format for the lecture each day will alternate between structured lecture and hands-on activities each day One half will be dedicated to creating and explaining code, as you follow by typing along line-by-line. This is often the fastest way to learn to code. The second half of each day will start the same, but end with an in-class assignment where you and your classmates put what you learned into practice. 
+
+
+## Student Responsibilities
+* Attend all of the lectures (unexcused absences will be penalized)
+* Do the coding exercises in class when they are assigned
+* Use the internet to find solutions to programming problems
+* Work with and learn from your fellow classmates
+* Annotate your code so it is useful to you and others
+* Share code and ideas, and help others who are struggling
+
+
+## Grading
+Assignments will consist of a combination of in-class activities, weekly assignments, and a final assessment. The usual grading paradigm of taking exams in a limited time frame and completing all work exclusively by yourself is antithetical to the programming world. Collaboration is encouraged and sometimes essential when conducting computational research. There are many ways to solve the same task in R, and learning varying techniques during group work will help you become a better coder. You will work with classmates on weekly coding puzzles. Additionally, you will have access to the internet when completing the final assessment. However, every computer is different, and you will learn that code may work on one machine and not another. You will need to understand your computer's 'quirks,' the underlying code, and how and why it functions to excel in the class.      
+
+## How you will be evaluated
+
+You will be responsible for updating and maintaining a portfolio of assignments on your Github web page. Portfolios will be assessed at the end of the semester.  
+
+#### Daily exercises (5pts, lowest dropped) -- 50%
+
+#### Weekly assignments (10 pts) -- ~35%
+
+#### Final assignment -- ~15%
+
+Grading is based on a percentage scale: 
+
+* 90–100% is an A   
+* 89.9% ≥ 80% is a B;  
+* 79.9% ≥ 70% is a C;  
+* < 60% is an F.  
+
+High (e.g., ≥ 87.5%) and low (e.g., ≤ 82.5%) grades within each range are given a + or -, except for the A range, wherein keeping with college policy — an A+ is not offered.
+
+## ADA Accommodations
+Students who have Letters of Accommodation in this class are encouraged to contact me as early in the semester as possible to ensure that such accommodations are implemented in a timely fashion. For those without Letters of Accommodation, assistance is available to eligible students through the Disability Resource Center (DRC). Please contact ADA Coordinators Jodi Litchfield and Peter Ploegman of the DRC at ada@middlebury.edu for more information. All discussions will remain confidential.
+

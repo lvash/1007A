@@ -306,23 +306,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -372,7 +366,7 @@ display: none;
 <div id="meetings" class="section level2">
 <h2>Meetings</h2>
 <p><strong>Days:</strong> Mondays, Tuesdays, Thursdays<br />
-<strong>Time:</strong> M/T: 1:00 - 4:00 PM | R: 1:00 - 3:00 PM<br />
+<strong>Time:</strong> 1:00 - 4:00 PM<br />
 <strong>Location:</strong> MBH 303<br />
 <strong>Course Website:</strong> <a href="https://lvash.github.io/BIOL1007A" class="uri">https://lvash.github.io/BIOL1007A</a></p>
 </div>
@@ -382,8 +376,8 @@ display: none;
 <h3>Dr. Lauren Ash</h3>
 <p><strong>Office:</strong> MBH 433<br />
 <strong>Email:</strong> <a href="mailto:lash@middlebury.edu" class="email">lash@middlebury.edu</a><br />
-<strong>Office hours:</strong> TBA and by appointment (in person or
-virtual)</p>
+<strong>Office hours:</strong> After each class and by appointment (in
+person or virtual)</p>
 </div>
 </div>
 <div id="pre-requisites" class="section level2">
@@ -426,7 +420,8 @@ practice.</p>
 <div id="student-responsibilities" class="section level2">
 <h2>Student Responsibilities</h2>
 <ul>
-<li>Attend all of the lectures</li>
+<li>Attend all of the lectures (unexcused absences will be
+penalized)</li>
 <li>Do the coding exercises in class when they are assigned</li>
 <li>Use the internet to find solutions to programming problems</li>
 <li>Work with and learn from your fellow classmates</li>
@@ -453,9 +448,10 @@ why it functions to excel in the class.</p>
 <div id="how-you-will-be-evaluated" class="section level2">
 <h2>How you will be evaluated</h2>
 <p>You will be responsible for updating and maintaining a portfolio of
-assignments on your Github web page.</p>
-<div id="daily-exercises-5pts-50" class="section level4">
-<h4>Daily exercises (5pts) – 50%</h4>
+assignments on your Github web page. Portfolios will be assessed at the
+end of the semester.</p>
+<div id="daily-exercises-5pts-lowest-dropped-50" class="section level4">
+<h4>Daily exercises (5pts, lowest dropped) – 50%</h4>
 </div>
 <div id="weekly-assignments-10-pts-35" class="section level4">
 <h4>Weekly assignments (10 pts) – ~35%</h4>
