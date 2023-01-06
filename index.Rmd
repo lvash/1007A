@@ -10,7 +10,7 @@ css: custom.css
 
 #### Professor Lauren Ash 
 Office: MBH 433   
-Office Hours: TBA and by appointment    
+Office Hours: After class and by appointment    
 Email: lash@middlebury.edu   
 
 <img src="Lauren.jpg" width="200" height="200" />
@@ -22,7 +22,7 @@ Email: lash@middlebury.edu
 * [R help](http://stackoverflow.com/questions/tagged/r)  
   
 
-# Table of contents for Homework Assignments 
+# Table of Contents for Schedule 
 
 * [Week 1 (Jan 5, 2023): Introductions & Program Installations](#id-section1)
 * [Week 2 (Week of Jan 9, 2023): RMarkdown / Github Webpage / Shell commands](#id-section2)
@@ -30,9 +30,40 @@ Email: lash@middlebury.edu
 * [Week 4 (Week of Jan 23, 2023): the tidyverse](#id-section4)
 * [Week 5 (Week of Jan 30, 2023): Data analysis](#id-section5)
 
+# Meet The Class of 2022
 
-# Lab Assignments and Notes
+Name  | GitHub Link | Portfolio Link | Fun Fact
+------------- | -------- | ------ | ------------- 
+Lauren Ash | [GitHub Account ](https://github.com/lvash) |  [Portfolio](https://lvash.github.io/) | While interning at Busch Gardens in Florida, I made friends with [Rosie the elephant](https://cloud.githubusercontent.com/assets/15003012/22121503/61755fec-de52-11e6-9a65-16b0e926c247.jpg) because she would sway and stare at me for hours.
+Andy Atallah | [Github Account](https://github.com/andya17)  |  [Portfolio]() | I have an older brother at Middlebury.  
+Ev Berger-Wolf | [Github Account](https://github.com/ebergerwolf)  |  [Portfolio]() | I have had the same shoe size since 5th grade. 
+Pearl Dlamini | [Github Account]()  | [Portfolio]() | I can speak 3 languages.
+John Dreyfous | [Github Account](https://github.com/jdreyfous) | [Portfolio]() | I've been a fishing guide since I was 15 years old. 
+Neel Epstein | [Github Account](https://github.com/nepstein25)  | [Portfolio]() | I've never had a pet.
+Jack Eschert | [Github Account](https://github.com/eschertj)  | [Portfolio]() | I am ambidextrous.
+Paul Fine-Lease | [Github Account](https://github.com/pfinelease) | [Portfolio]() | I have a pet rabbit.
+Chris Fink | [Github Account](https://github.com/finkc75)  | [Portfolio]() | I visited Green Bay, WI recently and am a big Packers fan.
+Jocelyn Flores | [Github Account](https://github.com/jmflo)  | [Portfolio]() | I would like to own chickens one day.
+David Goldsmith | [Github Account](https://github.com/davgold10) |  [Portfolio]() | I have a rabbit foot in my car.
+Abby Griffin | [Github Account](https://github.com/abbygriffin4) |  [Portfolio]() | I used to have a pet turtle.
+Max Hanscom | [Github Account](https://github.com/MHanscom96)  | [Portfolio]() | I'm from Seattle.
+Ugo Iroh | [Github Account](https://github.com/ugoiroh)  | [Portfolio]() | I cannot whistle.
+Ben Merz | [Github Account](https://github.com/btmerz77)  | [Portfolio]() | I'm missing a joint in my index fingers.
+Bakari Moitt | [Github Account](https://github.com/bmoitt)  | [Portfolio]() | I have five younger brothers.
+Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio]() | My eyes are two different colors.
+Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio]() | I like to bake.
+Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio]() | I have a younger brother at Middlebury.
+Steil | [Github Account](https://github.com/ksteil) |  [Portfolio]() | I'm the treasurer for the Middlebury College Equestrian Team
+Camilla Salwen | [Github Account]() |  [Portfolio]() | Fun fact
+Geetika Surapaneni | [Github Account](https://github.com/geetikasurapaneni)  | [Portfolio]() | I don't know how to ski.
+Alex Takoudes | [Github Account](https://github.com/atakoudes)  | [Portfolio]() | My left foot is bigger than my right.
+Lauren Thomson | [Github Account](https://github.com/lhthomson) |  [Portfolio]() | I used to be allergic to chocolate.
+Luke Van Horn | [Github Account](https://github.com/LukeVH) |  [Portfolio]() | I have a scar on my wrist from where a rabbit bit me as a child.
+Thomas Walsh | [Github Account](https://github.com/twalsh20)  | [Portfolio]() | I bowl with two hands.
+Penelope Weekes | [Github Account](https://github.com/pweeke)  | [Portfolio]() | I can juggle!
 
+
+# Schedule
 
 <div id='id-section1'/>
 ## Week 1: Introductions & Program Installations  
