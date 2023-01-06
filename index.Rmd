@@ -62,18 +62,24 @@ January 12 | [Lecture Notes]() | [Assignment Page]()
 
 **Resources:**
 
-* [Lecture Notes]()  
+* [Downloading git]()  
 
 
 <div id='id-section3'/>
 ## Week 3: Data structures 
 #### Week of January 16, 2023
 
-[Jan 16 Assignment Page]()
+Date  | Lecture | Assignment
+------------- |----------- | -------------
+January 16 | No Class | - 
+January 17 | [Lecture Notes]() | [Assignment Page]()
+January 19 | [Lecture Notes]() | [Assignment Page]()
 
-[Jan 17 Assignment Page]()
- 
-[Jan 19 Assignment Page]()
+
+**Resources:**
+
+* [Colors in R]()  
+
 
 
 
