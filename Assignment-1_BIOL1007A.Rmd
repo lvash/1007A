@@ -1,0 +1,17 @@
+---
+title: 'Assignment #1'
+author: "Lauren V. Ash"
+date: "Winter 2023"
+output: html_document
+---
+
+## Set up your class portfolio  
+
+1. Create a GitHub repository for the class with the name: `BIOL1007A` and make it a GitHub Page in Settings    
+2. Link the repository to an R project (consult lecture notes if you're stuck!) 
+3. Create an RMarkdown file named index.Rmd and knit to html  
+4. Create a new .Rmd file and name it Assignment1.Rmd. Delete the default text and copy and paste your notes from lecture. Knit to html.  
+5. Go back to index.Rmd and include a link to your Assignment1.html document using this format: `[Link text here](Assignment1.html)`  
+6. Use the Terminal to check the `status` of the repo, `add -A` to add all changes to the stage, `commit -am "put note here"` to commit the changes with a brief message explaining what the changes are, and `git push`  
+7. Go to yourgithubusername.github.io/BIOL1007A on your internet browser to see your index page  
+
