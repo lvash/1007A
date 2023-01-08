@@ -1,6 +1,6 @@
 ---
 title: "RMarkdown"
-author: "Lauren V. Ash"
+author: "Lauren V. Ash and Nicholas J. Gotelli"
 date: "Winter 2023"
 output: html_document
 ---

@@ -15,3 +15,8 @@ output: html_document
 6. Use the Terminal to check the `status` of the repo, `add -A` to add all changes to the stage, `commit -am "put note here"` to commit the changes with a brief message explaining what the changes are, and `git push`  
 7. Go to yourgithubusername.github.io/BIOL1007A on your internet browser to see your index page  
 
+
+
+#### **Due**  
+1. Your portfolio link in the Slack #general channel  
+2. Assignment 1 on your web page, which links to an html page of your notes   
