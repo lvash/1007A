@@ -1,10 +1,16 @@
 ---
-title: "RMarkdown"
+title: "Github (Cont'd) and RMarkdown"
 author: "Lauren V. Ash and Nicholas J. Gotelli"
 date: "Winter 2023"
 output: html_document
 ---
+# GitHub (Cont'd)
 
+See previous [Lecture Notes](Lecture-1_BIOL1007A.html)
+
+
+
+# RMarkdown
 - `.Rmd` is Rstudio's special blend of Markdown (a text rendering language)
 - `.md` is the more generic Markdown file type. In RStudio, the intermediate `.md` files are not (in the default state) preserved.
 

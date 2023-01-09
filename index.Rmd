@@ -56,7 +56,7 @@ Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio
 Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio]() | I like to bake.
 Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio]() | I have a younger brother at Middlebury.
 Steil | [Github Account](https://github.com/ksteil) |  [Portfolio]() | I'm the treasurer for the Middlebury College Equestrian Team
-Camilla Salwen | [Github Account]() |  [Portfolio]() | -
+Camilla Salwen | [Github Account](https://github.com/csalwen) |  [Portfolio]() | -
 Geetika Surapaneni | [Github Account](https://github.com/geetikasurapaneni)  | [Portfolio]() | I don't know how to ski.
 Alex Takoudes | [Github Account](https://github.com/atakoudes)  | [Portfolio]() | My left foot is bigger than my right.
 Lauren Thomson | [Github Account](https://github.com/lhthomson) |  [Portfolio]() | I used to be allergic to chocolate.
@@ -121,20 +121,26 @@ January 19 | [Lecture Notes]() | [Assignment Page]()
 ## Week 4: the `tidyverse`    
 #### Week of January 23, 2023
 
-[Jan 23 Assignment Page]()
+Date  | Lecture | Assignment
+------------- |----------- | -------------
+January 23 | [Lecture Notes]() | [Assignment Page]()
+January 24 | [Lecture Notes]() | [Assignment Page]()
+January 26 | [Lecture Notes]() | [Assignment Page]()
 
-[Jan 24 Assignment Page]()
- 
-[Jan 26 Assignment Page]().
+**Resources:**
 
-
+* [TBA]()  
 
 <div id='id-section5'/>   
 ## Week 5: Data analysis
 #### Week of January 30, 2023 
 
-[Jan 30 Assignment Page]()
+Date  | Lecture | Assignment
+------------- |----------- | -------------
+January 30 | [Lecture Notes]() | [Assignment Page]()
+January 31 | [Lecture Notes]() | [Assignment Page]()
+February 2  | [Lecture Notes]() | [Assignment Page]()
 
-[Jan 31 Assignment Page]()
- 
-[Feb 2 Assignment Page]()
+**Resources:**
+
+* [TBA]()  

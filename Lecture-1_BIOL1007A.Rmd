@@ -58,7 +58,7 @@ output: html_document
 
 ## Build the local R Project on your machine
 * open Rstudio
-* upper right use pulldown menu to create new project
+* upper right use pull-down menu to create new project
 * select "Version Control"
 * select "Git"
 * add '*.pdf' to gitignore or other files to not track

@@ -1,0 +1,25 @@
+---
+title: 'Assignment #2'
+author: "Lauren V. Ash"
+date: "Winter 2023"
+output: html_document
+---
+
+## Create an RMarkdown document  
+
+Use the RMarkdown cheat sheet and create an .Rmd with the following:
+
+1. A picture  
+2. A 3x5 table
+3. A few sentences that use bold and italic formatting   
+4. A bulleted list  
+5. A numbered list  
+6. A link to a website  
+7. Multiple sized headers. 
+8. A superscript and subscript. 
+9. An equation 
+10. Plain text within fencing
+
+
+#### **Due**  
+1. Assignment 2 as an html, linked on your portfolio.     
