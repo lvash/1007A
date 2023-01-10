@@ -37,32 +37,32 @@ Email: lash@middlebury.edu
 Name  | GitHub Link | Portfolio Link | Fun Fact
 ------------- | -------- | ------ | ------------- 
 Lauren Ash | [GitHub Account ](https://github.com/lvash) |  [Portfolio](https://lvash.github.io/) | While interning at Busch Gardens in Florida, I made friends with [Rosie the elephant](https://cloud.githubusercontent.com/assets/15003012/22121503/61755fec-de52-11e6-9a65-16b0e926c247.jpg) because she would sway and stare at me for hours.
-Andy Atallah | [Github Account](https://github.com/andya17)  |  [Portfolio]() | I have an older brother at Middlebury.  
-Ev Berger-Wolf | [Github Account](https://github.com/ebergerwolf)  |  [Portfolio]() | I have had the same shoe size since 5th grade. 
-Pearl Dlamini | [Github Account](https://github.com/peardlam)  | [Portfolio]() | I can speak 3 languages.
-Jake Dreyfous | [Github Account](https://github.com/jdreyfous) | [Portfolio]() | I've been a fishing guide since I was 15 years old. 
-Neel Epstein | [Github Account](https://github.com/nepstein25)  | [Portfolio]() | I've never had a pet.
-Jack Eschert | [Github Account](https://github.com/eschertj)  | [Portfolio]() | I'm ambidextrous and can write with either hand.
-Paul Fine-Lease | [Github Account](https://github.com/pfinelease) | [Portfolio]() | I have a pet rabbit.
-Chris Fink | [Github Account](https://github.com/finkc75)  | [Portfolio]() | I visited Green Bay, WI recently and am a big Packers fan.
-Jocelyn Flores | [Github Account](https://github.com/jmflo)  | [Portfolio]() | I would like to own chickens one day.
-David Goldsmith | [Github Account](https://github.com/davgold10) |  [Portfolio]() | I have a rabbit foot in my car.
-Abby Griffin | [Github Account](https://github.com/abbygriffin4) |  [Portfolio]() | I used to have a pet turtle.
-Max Hanscom | [Github Account](https://github.com/MHanscom96)  | [Portfolio]() | I'm from Seattle.
-Ugo Iroh | [Github Account](https://github.com/ugoiroh)  | [Portfolio]() | I cannot whistle.
-Ben Merz | [Github Account](https://github.com/btmerz77)  | [Portfolio]() | I'm missing a joint in my index fingers.
+Andy Atallah | [Github Account](https://github.com/andya17)  |  [Portfolio](https://andya17.github.io/BIO_1007A/) | I have an older brother at Middlebury.  
+Ev Berger-Wolf | [Github Account](https://github.com/ebergerwolf)  |  [Portfolio](https://ebergerwolf.github.io/BIOL1007A/) | I have had the same shoe size since 5th grade. 
+Pearl Dlamini | [Github Account](https://github.com/peardlam)  | [Portfolio](https://peardlam.github.io/BIOL1007A/) | I can speak 3 languages.
+Jake Dreyfous | [Github Account](https://github.com/jdreyfous) | [Portfolio](https://jdreyfous.github.io/BIOL1007A/) | I've been a fishing guide since I was 15 years old. 
+Neel Epstein | [Github Account](https://github.com/nepstein25)  | [Portfolio](https://nepstein25.github.io/BIOL1007/) | I've never had a pet.
+Jack Eschert | [Github Account](https://github.com/eschertj)  | [Portfolio](https://eschertj.github.io/BIOL1007A/) | I'm ambidextrous and can write with either hand.
+Paul Fine-Lease | [Github Account](https://github.com/pfinelease) | [Portfolio](https://pfinelease.github.io/BIOL1007A/) | I have a pet rabbit.
+Chris Fink | [Github Account](https://github.com/finkc75)  | [Portfolio](https://finkc75.github.io/BIO-1007A/) | I visited Green Bay, WI recently and am a big Packers fan.
+Jocelyn Flores | [Github Account](https://github.com/jmflo)  | [Portfolio](https://jmflo.github.io/BIOL1007A/) | I would like to own chickens one day.
+David Goldsmith | [Github Account](https://github.com/davgold10) |  [Portfolio](https://davgold10.github.io/BIOL1007/) | I have a rabbit foot in my car.
+Abby Griffin | [Github Account](https://github.com/abbygriffin4) |  [Portfolio](https://abbygriffin4.github.io/bio_1007a/) | I used to have a pet turtle.
+Max Hanscom | [Github Account](https://github.com/MHanscom96)  | [Portfolio](https://mhanscom96.github.io/BIO_1007A/) | I'm from Seattle.
+Ugo Iroh | [Github Account](https://github.com/ugoiroh)  | [Portfolio](https://ugoiroh.github.io/Bio_1007A/) | I cannot whistle.
+Ben Merz | [Github Account](https://github.com/btmerz77)  | [Portfolio](https://btmerz77.github.io/BIOL1007A/) | I'm missing a joint in my index fingers.
 Bakari Moitt | [Github Account](https://github.com/bmoitt)  | [Portfolio]() | I have five younger brothers.
-Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio]() | My eyes are two different colors.
-Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio]() | I like to bake.
-Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio]() | I have a younger brother at Middlebury.
-Steil | [Github Account](https://github.com/ksteil) |  [Portfolio]() | I'm the treasurer for the Middlebury College Equestrian Team
-Camilla Salwen | [Github Account](https://github.com/csalwen) |  [Portfolio]() | -
-Geetika Surapaneni | [Github Account](https://github.com/geetikasurapaneni)  | [Portfolio]() | I don't know how to ski.
+Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio](https://joshmondz.github.io/BIOL1007A/) | My eyes are two different colors.
+Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio](https://aplanting1.github.io/BIO1007A/) | I like to bake.
+Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio](https://ekpower.github.io/BIOL_1007A/) | I have a younger brother at Middlebury.
+Steil | [Github Account](https://github.com/ksteil) |  [Portfolio](https://ksteil.github.io/BIOL1007A/) | I'm the treasurer for the Middlebury College Equestrian Team
+Camilla Salwen | [Github Account](https://github.com/csalwen) |  [Portfolio](https://csalwen.github.io/BIOL1007A/) | -
+Geetika Surapaneni | [Github Account](https://github.com/geetikasurapaneni)  | [Portfolio](https://geetikasurapaneni.github.io/BIOL1007A/) | I don't know how to ski.
 Alex Takoudes | [Github Account](https://github.com/atakoudes)  | [Portfolio]() | My left foot is bigger than my right.
-Lauren Thomson | [Github Account](https://github.com/lhthomson) |  [Portfolio]() | I used to be allergic to chocolate.
-Luke Van Horn | [Github Account](https://github.com/LukeVH) |  [Portfolio]() | I have a scar on my wrist from where a rabbit bit me as a child.
-Thomas Walsh | [Github Account](https://github.com/twalsh20)  | [Portfolio]() | I bowl with two hands.
-Penelope Weekes | [Github Account](https://github.com/pweeke)  | [Portfolio]() | I can juggle!
+Lauren Thomson | [Github Account](https://github.com/lhthomson) |  [Portfolio](https://lhthomson.github.io/BIOL1007A/) | I used to be allergic to chocolate.
+Luke Van Horn | [Github Account](https://github.com/LukeVH) |  [Portfolio](https://lukevh.github.io/BIO_1007A/) | I have a scar on my wrist from where a rabbit bit me as a child.
+Thomas Walsh | [Github Account](https://github.com/twalsh20)  | [Portfolio](https://twalsh20.github.io/BIOL1007A/) | I bowl with two hands.
+Penelope Weekes | [Github Account](https://github.com/pweeke)  | [Portfolio](https://pweeke.github.io/BIOL1007A/) | I can juggle!
 
 
 # Schedule
@@ -106,8 +106,8 @@ January 12 | [Lecture Notes]() | [Assignment Page]()
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 16 | No Class | - 
-January 17 | [Lecture Notes]() | [Assignment Page]()
-January 19 | [Lecture Notes]() | [Assignment Page]()
+January 17 | [TBA]() | [TBA]()
+January 19 | [TBA]() | [TBA]()
 
 
 **Resources:**
@@ -123,9 +123,9 @@ January 19 | [Lecture Notes]() | [Assignment Page]()
 
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
-January 23 | [Lecture Notes]() | [Assignment Page]()
-January 24 | [Lecture Notes]() | [Assignment Page]()
-January 26 | [Lecture Notes]() | [Assignment Page]()
+January 23 | [TBA]() | [TBA]()
+January 24 | [TBA]() | [TBA]()
+January 26 | [TBA]() | [TBA]()
 
 **Resources:**
 
@@ -137,9 +137,9 @@ January 26 | [Lecture Notes]() | [Assignment Page]()
 
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
-January 30 | [Lecture Notes]() | [Assignment Page]()
-January 31 | [Lecture Notes]() | [Assignment Page]()
-February 2  | [Lecture Notes]() | [Assignment Page]()
+January 30 | [TBA]() | [TBA]()
+January 31 | [TBA]() | [TBA]()
+February 2  | [TBA]() | [TBA]()
 
 **Resources:**
 
