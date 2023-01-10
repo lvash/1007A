@@ -89,7 +89,7 @@ Penelope Weekes | [Github Account](https://github.com/pweeke)  | [Portfolio]() |
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 9 | [Lecture Notes](Lecture-1_BIOL1007A.html) | [Assignment Page](Assignment-1_BIOL1007A.html) 
-January 10 | [Lecture Notes]() | [Assignment Page]()
+January 10 | [Lecture Notes](Lecture-2_BIOL1007A.html) | [Assignment Page](Assignment-2_BIOL1007A.html)
 January 12 | [Lecture Notes]() | [Assignment Page]()
 
 
