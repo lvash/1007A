@@ -35,7 +35,7 @@ output: html_document
 - `Push` Pushing a set of changes means copying them from your local repository up to GitHub.
 - `Pull(=fetch)` Pulling means copying the repository in its current state on GitHub down to your local repository. This would incorporate any changes that others have made (and pushed) in a collaborative project.
 
-
+![](git-push-pull-steps.jpeg)
 
 # Link a github repository to an R project
 
