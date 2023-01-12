@@ -123,7 +123,7 @@ $$y = a + b$$
 
 $$y = a + b$$
 
-#### Subcripts
+#### Subcripts (for LaTeX equations)
 
 ```
 $$H_0 = Z_{a + b}$$

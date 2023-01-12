@@ -1,0 +1,31 @@
+---
+title: 'Assignment #3'
+author: "Winter 2023"
+date: "January 12, 2023"
+output: html_document
+---
+
+Some of these problems are adapted from Nick Gotelli's Computational Biology course which were adapted from:
+
+> Jones, O., R. Maillardet, and A. Robinson. 2009. Scientific Programming and Simulation Using R. CRC Press, Boca Raton.
+
+1. Suppose *x* = 1.1, *a* = 2.2, and *b* = 3.3. Assign each expression to the variable *z* and print the value stored in each *z*.
+
+    a) $x^{a^b}$
+    b) $(x^{a})^b$
+    c) $3x^3 + 2x^2 + 1$
+
+2. Using the `rep` and `seq` functions, create the following vectors:
+
+    a) $(1,2,3,4,5,6,7,8,7,6,5,4,3,2,1)$
+    b) $(1,2,2,3,3,3,4,4,4,4,5,5,5,5,5)$
+    c) $(5,4,4,3,3,3,2,2,2,2,1,1,1,1,1)$ 
+
+3. Create a vector using the code: `queue <- c("sheep", "fox", "owl", "ant")`, where `queue` represents the animals that are lined up to enter an exclusive club, with the sheep at the front of the line. Using R expressions, update `queue` as:
+
+    a) the serpent arrives and gets in the back of the line;
+    b) the sheep enters the club (so disappears from the line);
+    c) the donkey arrives and talks his way to the front of the line;
+    d) the serpent gets impatient and leaves;
+    e) the aphid arrives and the ant invites him to cut in line (hint: check out the append function).
+    f) Finally, determine the position of the aphid in the line (hint: use the which function).  

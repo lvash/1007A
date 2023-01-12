@@ -1,0 +1,10 @@
+---
+title: "Weekly Assignment"
+author: "BIOL1007A"
+date: "Winter 2023"
+output: html_document
+---
+
+> A friend has asked you how to set up a GitHub web page in RStudio. Create an Rmarkdown file  that explains the steps of setting one up and any troubleshooting advice you learned that could help them.  
+
+**Knit your Rmd file to html and post a link to your Guide on your portfolio page.** 

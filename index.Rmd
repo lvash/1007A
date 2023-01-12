@@ -56,9 +56,9 @@ Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio
 Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio](https://aplanting1.github.io/BIO1007A/) | I like to bake.
 Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio](https://ekpower.github.io/BIOL_1007A/) | I have a younger brother at Middlebury.
 Steil | [Github Account](https://github.com/ksteil) |  [Portfolio](https://ksteil.github.io/BIOL1007A/) | I'm the treasurer for the Middlebury College Equestrian Team
-Camilla Salwen | [Github Account](https://github.com/csalwen) |  [Portfolio](https://csalwen.github.io/BIOL1007A/) | -
+Camilla Salwen | [Github Account](https://github.com/csalwen) |  [Portfolio](https://csalwen.github.io/BIOL1007A/) | There was a time when I was at sea where I was closer the the International Space Station than land.  
 Geetika Surapaneni | [Github Account](https://github.com/geetikasurapaneni)  | [Portfolio](https://geetikasurapaneni.github.io/BIOL1007A/) | I don't know how to ski.
-Alex Takoudes | [Github Account](https://github.com/atakoudes)  | [Portfolio]() | My left foot is bigger than my right.
+Alex Takoudes | [Github Account](https://github.com/atakoudes)  | [Portfolio](https://atakoudes.github.io/BIOL1007A/) | My left foot is bigger than my right.
 Lauren Thomson | [Github Account](https://github.com/lhthomson) |  [Portfolio](https://lhthomson.github.io/BIOL1007A/) | I used to be allergic to chocolate.
 Luke Van Horn | [Github Account](https://github.com/LukeVH) |  [Portfolio](https://lukevh.github.io/BIO_1007A/) | I have a scar on my wrist from where a rabbit bit me as a child.
 Thomas Walsh | [Github Account](https://github.com/twalsh20)  | [Portfolio](https://twalsh20.github.io/BIOL1007A/) | I bowl with two hands.
@@ -90,8 +90,9 @@ Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 9 | [Lecture Notes](Lecture-1_BIOL1007A.html) | [Assignment Page](Assignment-1_BIOL1007A.html) 
 January 10 | [Lecture Notes](Lecture-2_BIOL1007A.html) | [Assignment Page](Assignment-2_BIOL1007A.html)
-January 12 | [Lecture Notes]() | [Assignment Page]()
+January 12 | [Lecture Notes](Lecture-3_BIOL1007A.html) | [Assignment Page](Assignment-3_BIOL1007A.html)
 
+##### [Weekly Assignment](Weekly-Assignment-1.html)
 
 **Resources:**
 
