@@ -1,0 +1,286 @@
+---
+title: "Lecture 4"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+### Vectors (cont'd)  
+#### Features of vectors  
+```{r eval=F}
+## Coercion
+
+# All atomics are of the same type
+# if they are different, R coerces them
+# logical -> integer -> double -> character
+a <- c(2, 2.0)
+print(a)
+typeof(a) # technically integer coerced to numeric
+b <- c("purple","green")
+typeof(b)
+d <- c(a,b)
+print(d)
+typeof(d)
+# "Mistakes" in numeric variables convert to strings
+# Very useful when working with logical variables
+a <- runif(10)
+print(a)
+# Comparison operators yield a logical result
+a > 0.5
+# do math on a logical and it coerces to an integer!
+# How many elements are greater than 0.5?
+sum(a > 0.5)
+# What proportion of the vector elements are greater than 0.5?
+mean(a > 0.5)
+
+
+## Vectorization
+# adding a constant to a vector
+z <- c(10,20,30)
+z + 1
+# what happens when vectors are added?
+y <- c(1,2,3)
+z + y
+# results is an "element by element" operation on the vector
+# most vector operations can be done this way
+z^2
+
+## Recycling
+# but what if vector lengths are not equal?
+z <- c(10,20,30)
+x <- c(1,2)
+z + x
+# warning is issued by calculation is still made
+# shorter vector is always "recycled"
+# works with scalars (= vector of length(1))
+
+```
+
+#### Simulating data with `runif` and `rnorm()`  
+
+```{r eval=F}
+
+runif(5) # 5 random uniform values betweeon 0 and 1
+
+runif(n=3,min=100, max=101) # 3 random uniform values between 100 and 101
+
+rnorm(6) # 6 random normal values with mean 0 and standard deviation 1
+
+rnorm(n=5, mean=100, sd=30) # 5 random normal values with mean 100 and sd 30
+```
+
+### Matrices  
+### Matrices
+
+```{r, eval=FALSE}
+# a matrix is an atomic vector that is organized into rows and columns
+my_vec <- 1:12
+m <- matrix(data=my_vec,nrow=4)
+print(m)
+m <- matrix(data=my_vec,ncol=3)
+print(m)
+m <- matrix(data=my_vec,ncol=3,byrow=TRUE)
+print(m)
+```
+
+### Lists
+
+```{r,eval=FALSE}
+# Lists are atomic vectors but each element 
+# can hold things of different types and different sizes
+myList <- list(1:10, matrix(1:8, nrow=4,byrow=TRUE), letters[1:3], pi)
+str(myList)
+class(myList)
+print(myList)
+
+# using [] gives you a single item, which is of type list
+myList[4]
+myList[4] - 3 # no, can't subtract a number from a list!
+
+# single brackets gives you only the element in that slot, which is always of type list
+
+# to grab the object itself, use [[]]
+myList[[4]]
+myList[[4]] - 3 # now we have the contents
+# if a list has 10 elements it is like a train with 10 cars
+# [[5]] gives you the contents of car #5
+##[c(4,5,6)] gives you a little train with cars 4, 5, and 6
+# once the double bracket is called, you can access individual elements as before
+myList[[2]]
+myList[[2]][4,1]
+
+# name list items when they are created
+myList2 <- list(Tester=FALSE,littleM=matrix(1:9,nrow=3))
+
+# named elements can be accessed with dollar sign
+myList2$littleM[2,3] # get row 2, column3
+myList2$littleM # show whole matrix
+myList2$littleM[2,] # show second row, all columns
+myList2$littleM[2] # what does this give you?
+# The "unlist" strings everything back into
+# a single atomic vector; coercion is used if there are mixed data types
+unRolled <- unlist(myList2)
+print(unRolled)
+
+## The most common use of list: output from a linear model is a list
+
+plot(Sepal.Length ~ Petal.Length, data= iris)
+results<-summary(lm(Sepal.Length ~ Petal.Length, data= iris))
+# how do we get p-value using square brackets? with unlist?
+
+```
+
+### Data Frames
+
+```{r,eval=FALSE}
+# a data frame is a list of equal-lengthed vectors, each of which is a column
+varA <- 1:12
+varB <- rep(c("Con","LowN","HighN"),each=4)
+varC <- runif(12)
+dFrame <- data.frame(varA,varB,varC,stringsAsFactors=FALSE)
+print(dFrame)
+str(dFrame)
+# add another row with rbind
+
+# make sure you add a list, with each item corresponding to a column
+# newData <- data.frame(list(varA=13,varB="HighN",varC=0.668),stringsAsFactors=FALSE)
+newData <- list(varA=13,varB="HighN",varC=0.668)
+print(newData)
+str(newData)
+# now bind them
+dFrame <- rbind(dFrame,newData)
+str(dFrame)
+tail(dFrame)
+
+
+# why can't you use c()?
+newData2 <- c(13, "HighN", 0.668)
+dFrame<-rbind(dFrame, newData2)
+str(dFrame)
+
+# adding another column is a little easier
+#newVar <- data.frame(varD=runif(13))
+newVar <- runif(13)
+dFrame <- cbind(dFrame,newVar)
+head(dFrame)
+```
+
+### Important Distinctions Between Data Frames and Matrices
+
+```{r, eval=FALSE}
+# create a matrix and data frame with same structures
+zMat <- matrix(data=1:30,ncol=3,byrow=TRUE)
+zDframe <- as.data.frame(zMat) # coerce it
+str(zMat)    # an atomic vector with 2 dimensions
+str(zDframe) # note horizontal layout of variabes!
+head(zDframe) # note automatic variable names
+head(zMat) # note identical layout
+# element referencing is the same in both
+zMat[3,3]
+zDframe[3,3]
+# so is column referencing
+zMat[,3]
+zDframe[,3]
+zDframe$V3 # note use of $ and named variable column
+# and row referencing
+zMat[3,]
+zDframe[3,] # note variable names and row number shown
+# what happens if we reference only one dimension?
+zMat[2] # takes the second element of atomic vector (column fill)
+zDframe[2] # takes second atomic vector (= column) from list
+zDframe["V2"]
+zDframe$V2
+```
+
+### Eliminating missing values
+```{r, eval=FALSE}
+# use complete.cases with atomic vector
+zD <- c(NA, rnorm(10), NA, rnorm(3))
+print(zD)
+complete.cases(zD)
+zD[complete.cases(zD)] # clean them out
+which(!complete.cases(zD)) # find NA slots
+
+# use with a matrix
+m <- matrix(1:20,nrow=5)
+m[1,1] <- NA
+m[5,4] <- NA
+print(m)
+m[complete.cases(m),] 
+
+# now get complete cases for only certain columns!
+m[complete.cases(m[,c(1,2)]),] # drops row 1
+m[complete.cases(m[,c(2,3)]),] # no drops
+m[complete.cases(m[,c(1,4)]),] # drops 1&4
+```
+
+
+
+### Techniques for assignments and subsetting matrices and data frames
+```{r,eval=FALSE}
+# same principle applied to both dimensions of a matrix
+m <- matrix(data=1:12,nrow=3)
+
+print(m)
+# subsetting based on elements
+m[1:2,3:4]
+
+# use blanks before or after comma to indicate full rows or columns
+m[1:2, ]    
+m[ ,3:4]
+# use logicals for more complex subsetting
+# e.g. select all columns for which the totals are > 15
+# first try this logical
+colSums(m) > 15
+m[ , colSums(m) > 15]
+# e.g. select all rows for which the row total is 22
+m[rowSums(m)==22, ]
+# note == for logical equal and != for logical NOT equal
+m[rowSums(m)!=22, ]
+
+# caution! simple subscripting to a vector changes the data type!
+z <- m[1, ]
+print(z)
+str(z)
+# to keep this as a matrix, must add the drop=FALSE option
+z2 <- m[1, ,drop=FALSE]
+print(z2)
+str(z2)
+# caution #2, always use both dimensions, or you will select a single matrix element
+m2 <- matrix(data=runif(9),nrow=3)
+print(m2)
+m2[2, ]
+# but now this will just pull the second element
+m2[2]
+# probably should specify row and column indicators
+m2[2,1]
+# also use logicals for assignments, not just subsetting
+m2[m2>0.6] <- NA
+print(m2)
+# A few changes for working with data frames:
+data <- iris
+str(data)
+# the data frame is a list of vectors, so it is set up like a matrix
+data[3,2]
+# you can specify just the column names
+dataSub <- data[c("Species","Petal.Length")]
+str(dataSub)
+# or in matrix style
+dataSub <- data[ ,c("Species","Petal.Length")]
+str(dataSub)
+# as before, with matrices, selecting only a single column changes it
+# from a data frame to a vector
+dataNames <- data[ ,"Species"]
+str(dataNames)
+
+# sorting by values
+head(iris)
+orderedIris <- iris[order(iris$Petal.Length),]
+head(orderedIris)
+
+```
+
+
+

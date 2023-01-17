@@ -107,7 +107,7 @@ January 12 | [Lecture Notes](Lecture-3_BIOL1007A.html) | [Assignment Page](Assig
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 16 | No Class | - 
-January 17 | [TBA]() | [TBA]()
+January 17 | [Lecture Notes](Lecture-4_BIOL1007A.html) | [Assignment](Assignment-4.html)
 January 19 | [TBA]() | [TBA]()
 
 

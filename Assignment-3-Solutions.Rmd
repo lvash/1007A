@@ -1,0 +1,95 @@
+---
+title: "Assignment 3 Potential Solutions"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+1. Suppose *x* = 1.1, *a* = 2.2, and *b* = 3.3. Assign each expression to the variable *z* and print the value stored in each *z*.
+
+    a) $x^{a^b}$
+    b) $(x^{a})^b$
+    c) $3x^3 + 2x^2 + 1$
+    
+```{r}
+x<-1.1
+a<-2.2
+b<-3.3
+
+# a.
+z<-x^(a^b)
+print(z)
+
+# b.
+z<-(x^a)^b
+print(z)
+
+# c.
+z<-3*x^3 + 2*x^2 + 1
+print(z)
+```
+
+2. Using the `rep` and `seq` functions, create the following vectors:
+
+    a) $(1,2,3,4,5,6,7,8,7,6,5,4,3,2,1)$
+    b) $(1,2,2,3,3,3,4,4,4,4,5,5,5,5,5)$
+    c) $(5,4,4,3,3,3,2,2,2,2,1,1,1,1,1)$ 
+
+```{r}
+a <- c(seq(1:8), seq(from=7, to=1))
+# or c(1:8,7:1) without seq
+print(a)
+
+b <- rep(1:5, c(1,2,3,4,5))
+# or rep(1:5,1:5)
+print(b)
+
+c <- rep(seq(from=5, to=1), c(1,2,3,4,5))
+# or rep(5:1,1:5)
+print(c)
+```
+
+
+3. Create a vector using the code: `queue <- c("sheep", "fox", "owl", "ant")`, where `queue` represents the animals that are lined up to enter an exclusive club, with the sheep at the front of the line. Using R expressions, update `queue` as:
+
+    a) the serpent arrives and gets in the back of the line;
+    b) the sheep enters the club (so disappears from the line);
+    c) the donkey arrives and talks his way to the front of the line;
+    d) the serpent gets impatient and leaves;
+    e) the aphid arrives and the ant invites him to cut in line (hint: check out the append function).
+    f) Finally, determine the position of the aphid in the line (hint: use the which function). 
+    
+```{r}
+queue<- c("sheep", "fox", "owl", "ant")
+
+# the serpent arrives
+queue[5]<-"serpent"
+print(queue)
+
+# the sheep enters the ark
+queue<-queue[-1]
+print(queue)
+
+# the donkey arrives and talks his way to the front of the line
+queue<-c("donkey",queue)
+print(queue)
+
+# the serpent gets impatient and leaves
+queue<-queue[-5]
+# or queue <- queue[-length(queue)]
+print(queue)
+
+# the owl gets bored and leaves
+queue<-queue[-3]
+# or queue <- queue[queue !="owl"]
+print(queue)
+
+# the aphid arrives and the ant invites him to cut in line
+queue<-append(queue, "aphid", after=2)
+# or queue <-c(queue[-length(queue)],c("aphid","ant"))
+print(queue)
+
+# Finally, determine the position of the aphid in the line.
+which(queue == "aphid")
+```
+
