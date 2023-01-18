@@ -88,9 +88,9 @@ Penelope Weekes | [Github Account](https://github.com/pweeke)  | [Portfolio](htt
 
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
-January 9 | [Lecture Notes](Lecture-1_BIOL1007A.html) | [Assignment Page](Assignment-1_BIOL1007A.html) 
-January 10 | [Lecture Notes](Lecture-2_BIOL1007A.html) | [Assignment Page](Assignment-2_BIOL1007A.html)
-January 12 | [Lecture Notes](Lecture-3_BIOL1007A.html) | [Assignment Page](Assignment-3_BIOL1007A.html)
+January 9 | [Lecture Notes](Lecture-1_BIOL1007A.html) | [Assignment 1 Page](Assignment-1_BIOL1007A.html) 
+January 10 | [Lecture Notes](Lecture-2_BIOL1007A.html) | [Assignment 2 Page](Assignment-2_BIOL1007A.html)
+January 12 | [Lecture Notes](Lecture-3_BIOL1007A.html) | [Assignment 3 Page](Assignment-3_BIOL1007A.html)
 
 ##### [Weekly Assignment](Weekly-Assignment-1.html)
 
@@ -107,14 +107,10 @@ January 12 | [Lecture Notes](Lecture-3_BIOL1007A.html) | [Assignment Page](Assig
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 16 | No Class | - 
-January 17 | [Lecture Notes](Lecture-4_BIOL1007A.html) | [Assignment](Assignment-4.html)
-January 19 | [TBA]() | [TBA]()
+January 17 | [Lecture Notes](Lecture-4_BIOL1007A.html) | [Assignment 4](Assignment-4.html)
+January 19 | [Lecture Notes](Lecture-5_BIOL1007A.html) | [Assignment 5](Assignment-5_BIOL1007A.html)
 
-
-**Resources:**
-
-* [TBA]()  
-
+##### [Weekly Assignment 2](Weekly-Assignment-2.html) 
 
 
 

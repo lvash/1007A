@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-01-18" />
 
-<title>Lecture 5</title>
+<title>Assignment 5</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,229 +350,57 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Lecture 5</h1>
+<h1 class="title toc-ignore">Assignment 5</h1>
 <h4 class="author">BIOL1007A</h4>
 <h4 class="date">2023-01-18</h4>
 
 </div>
 
 
-<div id="techniques-for-assignments-and-subsetting-matrices-and-data-frames" class="section level3">
-<h3>Techniques for assignments and subsetting matrices and data
-frames</h3>
-<pre class="r"><code># same principle applied to both dimensions of a matrix
-m &lt;- matrix(data=1:12,nrow=3)
-
-print(m)
-# subsetting based on elements
-m[1:2,3:4]
-
-# use blanks before or after comma to indicate full rows or columns
-m[1:2, ]    
-m[ ,3:4]
-# use logicals for more complex subsetting
-# e.g. select all columns for which the totals are &gt; 15
-# first try this logical
-colSums(m) &gt; 15
-m[ , colSums(m) &gt; 15]
-# e.g. select all rows for which the row total is 22
-m[rowSums(m)==22, ]
-# note == for logical equal and != for logical NOT equal
-m[rowSums(m)!=22, ]
-
-# caution! simple subscripting to a vector changes the data type!
-z &lt;- m[1, ]
-print(z)
-str(z)
-# to keep this as a matrix, must add the drop=FALSE option
-z2 &lt;- m[1, ,drop=FALSE]
-print(z2)
-str(z2)
-# caution #2, always use both dimensions, or you will select a single matrix element
-m2 &lt;- matrix(data=runif(9),nrow=3)
-print(m2)
-m2[2, ]
-# but now this will just pull the second element
-m2[2]
-# probably should specify row and column indicators
-m2[2,1]
-# also use logicals for assignments, not just subsetting
-m2[m2&gt;0.6] &lt;- NA
-print(m2)
-# A few changes for working with data frames:
-data &lt;- iris
-str(data)
-# the data frame is a list of vectors, so it is set up like a matrix
-data[3,2]
-# you can specify just the column names
-dataSub &lt;- data[c(&quot;Species&quot;,&quot;Petal.Length&quot;)]
-str(dataSub)
-# or in matrix style
-dataSub &lt;- data[ ,c(&quot;Species&quot;,&quot;Petal.Length&quot;)]
-str(dataSub)
-# as before, with matrices, selecting only a single column changes it
-# from a data frame to a vector
-dataNames &lt;- data[ ,&quot;Species&quot;]
-str(dataNames)
-
-# sorting by values
-head(iris)
-orderedIris &lt;- iris[order(iris$Petal.Length),]
-head(orderedIris)</code></pre>
-</div>
-<div id="functions" class="section level3">
-<h3>Functions</h3>
-<pre class="r"><code>### Functions in R
-- Everything in R is a function
-sum(3,2) # a &quot;prefix&quot; function
-3 + 2 # an &quot;operator&quot;, but it is actually a function
-`+`(3,2) # the operator is an &quot;infix&quot; function
-y &lt;- 3
-print(y)
-`&lt;-`(yy,3) # another &quot;infix&quot; function
-print(yy)
-# to see contents of a function, print it
-print(read.table)
-sd # shows the code
-sd(c(3,2)) # call the function with parameters
-# sd() # call function with default values for parameters</code></pre>
-</div>
-<div id="the-anatomy-of-a-user-defined-function" class="section level3">
-<h3>The Anatomy Of A User-Defined Function</h3>
-<pre><code>functionName &lt;- function(argX=defaultX,argY=defaultY,argZ=defaultZ) { 
-# curly bracket open marks the start of the function body
-# Body of the function goes here
-# Lines of R code and annotations
-# May also call functions
-# May also create functions
-# May also create local variables
-return(z)  # returns from the function a single element (z could be a list)
-# curly bracket close marks the end of the function body
-} 
-# prints the function body
-functionName 
-# calls the function with default values and returns object z
-functionName() 
-# calls the function with user-specified values for each paramater
-functionName(parX=myMatrix,parY=&quot;Order&quot;,parZ=c(0.3,1.6,2,6))</code></pre>
-</div>
-<div id="stylistic-conventions-for-programming-functions" class="section level3">
-<h3>Stylistic Conventions For Programming Functions</h3>
+<div id="continued-from-assignment-4" class="section level3">
+<h3>Continued from Assignment 4</h3>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Create a list with the following named elements:</p>
 <ul>
-<li>Use prominent hash character fencing at start and at finish</li>
-<li>Give a header with the function name, description input, and
-output</li>
-<li>names inside functions can be short</li>
-<li>functions should be simple and short, no more than a screenful</li>
-<li>if too complex, break into multiple shorter functions</li>
-<li>provide default values for all function arguments</li>
-<li>ideally use random numbers as defaults for rapid testing</li>
+<li><code>my_matrix</code>, which is a 4 x 4 matrix filled with random
+uniform values</li>
+<li><code>my_logical</code> which is a 100-element vector of TRUE or
+FALSE values. You can do this efficiently by setting up a vector of
+random values and then applying an inequality to it.</li>
+<li><code>my_letters</code>, which is a 26-element vector of all the
+lower-case letters in random order.</li>
 </ul>
-</div>
-<div id="scoping-in-functions" class="section level3">
-<h3>Scoping In Functions</h3>
+<p>Then, complete the following steps:</p>
 <ul>
-<li>global variables: visible to all parts of the code; declared in main
-body</li>
-<li>local variables: visible only within function; declared in function
-or passed to function through parameters</li>
-<li>functions “can” see variables in global environment</li>
-<li>global environment cannot see variables in function environment</li>
-</ul>
-<pre class="r"><code>myFunc &lt;- function(a=3,b=4) {
-  z &lt;- a + b
-  return(z)
-}
-
-## Print vs Return: printing means showing a value in the console. Returning means giving back a value from a function. 
-
-myFunc()
-myFuncBad &lt;-function(a=3) {
-  z &lt;- a + b
-  return(z)
-}
-
-myFuncBad() # crashes because it can&#39;t find b
-b &lt;- 100
-
-myFuncBad() # OK now because b exists as a global variable
-# But it is fine to create variables locally
-
-myFuncOK &lt;- function(a=3) {
-  bb &lt;- 100
-  z &lt;- a + bb
-  return(z)
-}
-
-myFuncOK() # no problems now
-print(bb) # but this variable is still hidden from the global environment</code></pre>
-</div>
-<div id="use-multiple-return-statements-for-different-possible-return-values" class="section level3">
-<h3>Use Multiple <code>return()</code> Statements For Different Possible
-Return Values</h3>
-<pre class="r"><code>##################################################
-# FUNCTION: HardyWeinberg
-# input: an allele frequency p (0,1)
-# output: p and the frequencies of the 3 genotypes AA, AB, BB
-#------------------------------------------------- 
-HardyWeinberg&lt;- function(p=runif(1)) {
-  if (p &gt; 1.0 | p &lt; 0.0) {
-    return(&quot;Function failure: p must be &gt;= 0.0 and &lt;= 1.0&quot;)
-  }
-  q &lt;- 1 - p
-  fAA &lt;- p^2
-  fAB &lt;- 2*p*q
-  fBB &lt;- q^2
- vecOut &lt;- signif(c(p=p,AA=fAA,AB=fAB,BB=fBB),digits=3)
- return(vecOut)
-  }
-##################################################
-  HardyWeinberg()
-  HardyWeinberg(p=0.25)
-  HardyWeinberg(1.1) # prints error to screen
-  z &lt;- HardyWeinberg(1.1) 
-  print(z) # Error message was saved to variable z!</code></pre>
-</div>
-<div id="simple-regression-function" class="section level3">
-<h3>Simple regression function</h3>
-<pre class="r"><code>##################################################
-# FUNCTION: fitLinear 
-# fits simple regression line
-# inputs: numeric vector of predictor (x) and response (y)
-# outputs: slope and p-value
-#------------------------------------------------- 
-fitLinear &lt;- function(x=runif(20),y=runif(20)) {
-  myMod &lt;- lm(y~x) # fit the model
-  myOut &lt;- c(slope=summary(myMod)$coefficients[2,1],
-             pValue=summary(myMod)$coefficients[2,4])
-  plot(x=x,y=y) # quick and dirty plot to check output
-  return(myOut)
-}
-##################################################
-fitLinear()</code></pre>
-</div>
-<div id="creating-a-more-complex-default-value" class="section level3">
-<h3>Creating a more complex default value</h3>
-<pre class="r"><code>##################################################
-# FUNCTION: fitLinear2       
-# fits simple regression line
-# inputs: numeric vector of predictor (x) and response (y)
-# outputs: slope and p-value
-#------------------------------------------------- 
-fitLinear2 &lt;- function(p=NULL) {
-  if(is.null(p)) {
-     p &lt;- list(x=runif(20),y=runif(20))
-  }
-  myMod &lt;- lm(p$x~p$y) # fit the model
-  myOut &lt;- c(slope=summary(myMod)$coefficients[2,1],
-             pValue=summary(myMod)$coefficients[2,4])
-  plot(x=p$x,y=p$y) # quick and dirty plot to check output
-  return(myOut)
-}
-##################################################
-fitLinear2()
-myPars &lt;-list(x=1:10,y=runif(10))
-fitLinear2(myPars)</code></pre>
+<li>create a new list, which has the element[2,2] from the matrix, the
+second element of the logical vector, and the second element of the
+letters vector.</li>
+<li>use the <code>typeof()</code> function to confirm the underlying
+data types of each component in this list</li>
+<li>combine the underlying elements from the new list into a single
+atomic vector with the <code>c()</code> function.</li>
+<li>what is the data type of this vector?</li>
+</ul></li>
+<li><p>Create an empty data frame with two variables (= columns) and 26
+observations (= rows) below:</p>
+<ul>
+<li><p>call the first column/variable <code>my_unifs</code> and fill it
+with 26 random uniform values from 0 to 10</p></li>
+<li><p>call the second variable <code>my_letters</code> and fill it with
+26 capital letters in random order.</p></li>
+<li><p>for the first variable, use a single line of code in R to select
+4 random rows and replace the numerical values in those rows with
+<code>NA</code>.</p></li>
+<li><p>for the first variable, write a single line of R code to identify
+which rows have the missing values.<br />
+</p></li>
+<li><p>re-order the entire data frame to arrange the second variable in
+alphabetical order.</p></li>
+<li><p>calculate the column mean for the first variable.<br />
+</p></li>
+<li><p>rename the second column ‘my_LETTERS’</p></li>
+</ul></li>
+</ol>
 </div>
 
 
