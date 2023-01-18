@@ -11,7 +11,7 @@
 
 <meta name="author" content="BIOL1007A" />
 
-<meta name="date" content="2023-01-17" />
+<meta name="date" content="2023-01-18" />
 
 <title>Lecture 4</title>
 
@@ -352,7 +352,7 @@ display: none;
 
 <h1 class="title toc-ignore">Lecture 4</h1>
 <h4 class="author">BIOL1007A</h4>
-<h4 class="date">2023-01-17</h4>
+<h4 class="date">2023-01-18</h4>
 
 </div>
 
@@ -555,69 +555,6 @@ m[complete.cases(m),]
 m[complete.cases(m[,c(1,2)]),] # drops row 1
 m[complete.cases(m[,c(2,3)]),] # no drops
 m[complete.cases(m[,c(1,4)]),] # drops 1&amp;4</code></pre>
-</div>
-<div id="techniques-for-assignments-and-subsetting-matrices-and-data-frames" class="section level3">
-<h3>Techniques for assignments and subsetting matrices and data
-frames</h3>
-<pre class="r"><code># same principle applied to both dimensions of a matrix
-m &lt;- matrix(data=1:12,nrow=3)
-
-print(m)
-# subsetting based on elements
-m[1:2,3:4]
-
-# use blanks before or after comma to indicate full rows or columns
-m[1:2, ]    
-m[ ,3:4]
-# use logicals for more complex subsetting
-# e.g. select all columns for which the totals are &gt; 15
-# first try this logical
-colSums(m) &gt; 15
-m[ , colSums(m) &gt; 15]
-# e.g. select all rows for which the row total is 22
-m[rowSums(m)==22, ]
-# note == for logical equal and != for logical NOT equal
-m[rowSums(m)!=22, ]
-
-# caution! simple subscripting to a vector changes the data type!
-z &lt;- m[1, ]
-print(z)
-str(z)
-# to keep this as a matrix, must add the drop=FALSE option
-z2 &lt;- m[1, ,drop=FALSE]
-print(z2)
-str(z2)
-# caution #2, always use both dimensions, or you will select a single matrix element
-m2 &lt;- matrix(data=runif(9),nrow=3)
-print(m2)
-m2[2, ]
-# but now this will just pull the second element
-m2[2]
-# probably should specify row and column indicators
-m2[2,1]
-# also use logicals for assignments, not just subsetting
-m2[m2&gt;0.6] &lt;- NA
-print(m2)
-# A few changes for working with data frames:
-data &lt;- iris
-str(data)
-# the data frame is a list of vectors, so it is set up like a matrix
-data[3,2]
-# you can specify just the column names
-dataSub &lt;- data[c(&quot;Species&quot;,&quot;Petal.Length&quot;)]
-str(dataSub)
-# or in matrix style
-dataSub &lt;- data[ ,c(&quot;Species&quot;,&quot;Petal.Length&quot;)]
-str(dataSub)
-# as before, with matrices, selecting only a single column changes it
-# from a data frame to a vector
-dataNames &lt;- data[ ,&quot;Species&quot;]
-str(dataNames)
-
-# sorting by values
-head(iris)
-orderedIris &lt;- iris[order(iris$Petal.Length),]
-head(orderedIris)</code></pre>
 </div>
 
 

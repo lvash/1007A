@@ -1,0 +1,73 @@
+---
+title: "Lecture 5"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Techniques for assignments and subsetting matrices and data frames
+```{r,eval=FALSE}
+# same principle applied to both dimensions of a matrix
+m <- matrix(data=1:12,nrow=3)
+
+print(m)
+# subsetting based on elements
+m[1:2,3:4]
+
+# use blanks before or after comma to indicate full rows or columns
+m[1:2, ]    
+m[ ,3:4]
+# use logicals for more complex subsetting
+# e.g. select all columns for which the totals are > 15
+# first try this logical
+colSums(m) > 15
+m[ , colSums(m) > 15]
+# e.g. select all rows for which the row total is 22
+m[rowSums(m)==22, ]
+# note == for logical equal and != for logical NOT equal
+m[rowSums(m)!=22, ]
+
+# caution! simple subscripting to a vector changes the data type!
+z <- m[1, ]
+print(z)
+str(z)
+# to keep this as a matrix, must add the drop=FALSE option
+z2 <- m[1, ,drop=FALSE]
+print(z2)
+str(z2)
+# caution #2, always use both dimensions, or you will select a single matrix element
+m2 <- matrix(data=runif(9),nrow=3)
+print(m2)
+m2[2, ]
+# but now this will just pull the second element
+m2[2]
+# probably should specify row and column indicators
+m2[2,1]
+# also use logicals for assignments, not just subsetting
+m2[m2>0.6] <- NA
+print(m2)
+# A few changes for working with data frames:
+data <- iris
+str(data)
+# the data frame is a list of vectors, so it is set up like a matrix
+data[3,2]
+# you can specify just the column names
+dataSub <- data[c("Species","Petal.Length")]
+str(dataSub)
+# or in matrix style
+dataSub <- data[ ,c("Species","Petal.Length")]
+str(dataSub)
+# as before, with matrices, selecting only a single column changes it
+# from a data frame to a vector
+dataNames <- data[ ,"Species"]
+str(dataNames)
+
+# sorting by values
+head(iris)
+orderedIris <- iris[order(iris$Petal.Length),]
+head(orderedIris)
+
+```
+
+
+

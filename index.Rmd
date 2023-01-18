@@ -51,7 +51,7 @@ Abby Griffin | [Github Account](https://github.com/abbygriffin4) |  [Portfolio](
 Max Hanscom | [Github Account](https://github.com/MHanscom96)  | [Portfolio](https://mhanscom96.github.io/BIO_1007A/) | I'm from Seattle.
 Ugo Iroh | [Github Account](https://github.com/ugoiroh)  | [Portfolio](https://ugoiroh.github.io/Bio_1007A/) | I cannot whistle.
 Ben Merz | [Github Account](https://github.com/btmerz77)  | [Portfolio](https://btmerz77.github.io/BIOL1007A/) | I'm missing a joint in my index fingers.
-Bakari Moitt | [Github Account](https://github.com/bmoitt)  | [Portfolio]() | I have five younger brothers.
+Bakari Moitt | [Github Account](https://github.com/bmoitt)  | [Portfolio](https://bmoitt.github.io/BIOL1007A/) | I have five younger brothers.
 Josh Mondzelewski | [Github Account](https://github.com/JoshMondz)  | [Portfolio](https://joshmondz.github.io/BIOL1007A/) | My eyes are two different colors.
 Andrew Planting | [Github Account](https://github.com/aplanting1) |  [Portfolio](https://aplanting1.github.io/BIO1007A/) | I like to bake.
 Emily Power | [Github Account](https://github.com/ekpower)  | [Portfolio](https://ekpower.github.io/BIOL_1007A/) | I have a younger brother at Middlebury.
