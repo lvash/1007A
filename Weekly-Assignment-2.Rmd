@@ -10,14 +10,14 @@ output: html_document
 1. Create a function that returns a data frame with 2 columns (named "Type" and "Value") and 50 rows/observations.  
 - The first column should have "Control" as the first 25 observations and "Treatment" as the second half of observations.   
 - The second column should have the first 25 values as random and normally distributed with a mean of 10 and standard deviation of 1.5. The next 25 values of the second column should be random and normally distributed with a mean of 45 and standard deviation of 2.  
-- You can do this all as a single line of code in the function or by breaking it up into multiple code blocks.  
+- The arguments of your function should be the two means of the random normal numbers.   
+- The body of the function can be a single line of code (if you want a challenge) or broken up into multiple code blocks.  
 
-2.  Save your new function's output as a variable, and use a function to view the first 6 rows of the data frame.   
+2.  Save your new function's output as a variable, and view the first 6 rows of the data frame.   
 
-3.  Let's say you would like to know whether there is a statistically significant difference in "Value" (response variable y) depending on "Type" (explanatory variable x). Type `?aov` in the console to determine how to run an analysis of variance (ANOVA) on your simulated data. Write a line of code that displays a summary of your ANOVA. 
+3.  Let's say you would like to know whether there is a statistically significant difference in "Value" (response variable y) depending on "Type" (explanatory variable x). Type `?aov` in the console to determine how to run an analysis of variance (ANOVA) on your simulated data. The formula is written as `yVar~xVar` with yVar as the column name of your response variable and xVar as the column name of your explanatory variable. Write a line of code that displays a summary of your ANOVA. 
 
-4. Finally create a function that uses a data frame as its input and returns only the p-value of an ANOVA summary table (feel free to use Google/Stack Overflow). Write your code in such a way that you can use any simulated data set with two columns as the function's argument. 
-
+4. Finally create a function that uses a data frame as its input and returns only the p-value of an ANOVA summary table (feel free to use Google/Stack Overflow). Write your code in such a way that you can use any simulated data set with two columns (i.e. the output of your first function) as your ANOVA function's argument. 
 
 
 ## Jazz up your portfolio page 

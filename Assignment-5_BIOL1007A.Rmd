@@ -14,12 +14,12 @@ output: html_document
     Then, complete the following steps:
     
     - create a new list, which has the element[2,2] from the matrix, the second element of the logical vector, and the second element of the letters vector.
-    - use the `typeof()` function to confirm the underlying data types of each component in this list
+    - use the `str` function to confirm the underlying data types of each component in this list
     - combine the underlying elements from the new list into a single atomic vector with the `c()` function.
     - what is the data type of this vector?
 
 
-3. Create an empty data frame with two variables (= columns) and 26 observations (= rows) below:
+3. Create a data frame with following two variables (= columns) and 26 observations (= rows) below:
 
     - call the first column/variable `my_unifs` and fill it with 26 random uniform values from 0 to 10
 
