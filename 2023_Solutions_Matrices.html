@@ -9,11 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="BIOL1007A" />
+<meta name="author" content="BIOL 1007A" />
 
-<meta name="date" content="2023-01-23" />
 
-<title>Assignment 6</title>
+<title>Assignment 5 Solutions</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,52 +349,138 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Assignment 6</h1>
-<h4 class="author">BIOL1007A</h4>
-<h4 class="date">2023-01-23</h4>
+<h1 class="title toc-ignore">Assignment 5 Solutions</h1>
+<h4 class="author">BIOL 1007A</h4>
+<h4 class="date">Winter 2023</h4>
 
 </div>
 
 
-<div id="data-manipulations-using-the-dplyr-package" class="section level2">
-<h2>Data manipulations using the <code>dplyr</code> package</h2>
-<p>This homework assignment focus on data manipulation in
-<code>R</code>. Complete these problems using the <code>dplyr</code> and
-<code>tidyverse</code> packages.</p>
+<div id="working-with-matrices-lists-and-data-frames" class="section level2">
+<h2>Working with matrices, lists, and data frames</h2>
 <ol style="list-style-type: decimal">
-<li><p>Examine the structure of the iris data set. How many observations
-and variables are in the data set?</p></li>
-<li><p>Create a new data frame <code>iris1</code> that contains only the
-species <em>virginica</em> and <em>versicolor</em> with sepal lengths
-longer than 6 cm and sepal widths longer than 2.5 cm. How many
-observations and variables are in the data set?</p></li>
-<li><p>Now, create a <code>iris2</code> data frame from
-<code>iris1</code> that contains only the columns for Species,
-Sepal.Length, and Sepal.Width. How many observations and variables are
-in the data set?</p></li>
-<li><p>Create an <code>iris3</code> data frame from <code>iris2</code>
-that orders the observations from largest to smallest sepal length. Show
-the first 6 rows of this data set.</p></li>
-<li><p>Create an <code>iris4</code> data frame from <code>iris3</code>
-that creates a column with a sepal area (length * width) value for each
-observation. How many observations and variables are in the data
-set?</p></li>
-<li><p>Create the variable <code>irisTab</code> that shows the average
-sepal length, the average sepal width, and the sample size of the entire
-<code>iris4</code> data frame and print <code>irisTab</code>.</p></li>
-<li><p>Finally, create <code>iris5</code> that calculates the average
-sepal length, the average sepal width, and the sample size <em>for each
-species</em> of in the <code>iris4</code> data frame and print
-<code>iris5</code>.</p></li>
-<li><p>In these exercises, you have successively modified different
-versions of the data frame <code>iris1 iris2 iris3 iris4 iris5</code>.
-At each stage, the output data frame from one operation serves as the
-input fro the next. A more efficient way to do this is to use the pipe
-operator <code>%&gt;%</code> from the <code>tidyr</code> package. Rework
-all of your previous statements (except for <code>irisTab</code>) into
-an extended piping operation that uses <code>iris</code> as the input
-and generates <code>irisFinal</code> as the output.</p></li>
+<li>Assign to the variable n_dims a single random integer between 3 and
+10.</li>
 </ol>
+<pre class="r"><code>set.seed(752)
+n_dims&lt;-sample(3:10, 1)</code></pre>
+<ul>
+<li>Create a vector of consecutive integers from 1 to n_dims2.</li>
+</ul>
+<pre class="r"><code>vec &lt;- seq(1:n_dims^2)</code></pre>
+<ul>
+<li>Use the sample function to randomly reshuffle these values.</li>
+</ul>
+<pre class="r"><code>randVec &lt;- sample(vec)</code></pre>
+<ul>
+<li>create a square matrix with these elements.</li>
+</ul>
+<pre class="r"><code>m&lt;-matrix(data=randVec, nrow=n_dims, ncol=n_dims)</code></pre>
+<ul>
+<li>print out the matrix.</li>
+</ul>
+<pre class="r"><code>print(m)</code></pre>
+<ul>
+<li>find a function in r to transpose the matrix.<br />
+</li>
+<li>print it out again and note how it has changed.</li>
+</ul>
+<pre class="r"><code>t(m) ##rows become columns</code></pre>
+<ul>
+<li>calculate the sum and the mean of the elements in the first row and
+the last row.</li>
+</ul>
+<pre class="r"><code>sum(m[1,]); mean(m[1,])
+sum(m[n_dims,]); mean(m[n_dims,])</code></pre>
+<ul>
+<li>if have set your code up properly, you should be able to re-run it
+and create a matrix of different size because n_dims will change.</li>
+</ul>
+<p>This means you should not have used any integer values when setting
+up the matrix. Use the <code>n_dims</code> variable instead so the code
+can run repeatedly with different values.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a list with the following named elements:</li>
+</ol>
+<ul>
+<li><p>my_matrix, which is a 4 x 4 matrix filled with random uniform
+values</p></li>
+<li><p>my_logical which is a 100-element vector of TRUE or FALSE values.
+Do this efficiently by setting up a vector of random values and then
+applying an inequality to it.</p></li>
+<li><p>my_letters, which is a 26-element vector of all the lower-case
+letters in random order.</p></li>
+</ul>
+<pre class="r"><code>my_matrix &lt;- matrix(data=runif(16), nrow=4, ncol=4)
+
+my_logical &lt;- as.logical(sample(0:1, 100, replace=T))
+
+my_letters &lt;- sample(letters) #or tolower(LETTERS)</code></pre>
+<ul>
+<li>create a new list, which has the element[2,2] from the matrix, the
+second element of the logical vector, and the second element of the
+letters vector.</li>
+</ul>
+<pre class="r"><code>myList &lt;- list(my_matrix[2,2], my_logical[2], my_letters[2])
+#myList</code></pre>
+<ul>
+<li>use the typeof() function to confirm the underlying data types of
+each component in this list</li>
+</ul>
+<pre class="r"><code>typeof(myList[[3]])</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>str(myList)</code></pre>
+<pre><code>## List of 3
+##  $ : num 0.45
+##  $ : logi FALSE
+##  $ : chr &quot;x&quot;</code></pre>
+<ul>
+<li>combine the underlying elements from the new list into a single
+atomic vector with the c() function.<br />
+</li>
+<li>what is the data type of this vector?</li>
+</ul>
+<pre class="r"><code>myVec&lt;- c(myList[[1]],myList[[2]],myList[[3]])
+typeof(myVec[[3]]) # transformed to character</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a data frame with following two variables (= columns) and 26
+observations (= rows) below:</li>
+</ol>
+<ul>
+<li><p>call the first variable my_unis and fill it with a random uniform
+value from 0 to 10</p></li>
+<li><p>call the second variable my_letters and fill it with 26 capital
+letters in random order.</p></li>
+</ul>
+<pre class="r"><code>df&lt;-data.frame(my_unis=runif(26, min=0, max=10),my_letters=sample(LETTERS))</code></pre>
+<ul>
+<li>for the first variable, use a single line of code in R to select 4
+random rows and replace the numerical values in those rows with NA.</li>
+</ul>
+<pre class="r"><code>df[sample(1:nrow(df), 4),1]&lt;-NA</code></pre>
+<ul>
+<li>for the first variable, write a single line of R code to identify
+which rows have the missing values.</li>
+</ul>
+<pre class="r"><code>which(!complete.cases(df))</code></pre>
+<ul>
+<li>for the second variable, sort it in alphabetical order</li>
+</ul>
+<pre class="r"><code>df[order(df$my_letters),]</code></pre>
+<ul>
+<li>calculate the column mean for the first variable.</li>
+</ul>
+<pre class="r"><code>mean(df$my_unis, na.rm =T)</code></pre>
+<pre><code>## [1] 4.005096</code></pre>
+<ul>
+<li>rename the second column ‘my_LETTERS’</li>
+</ul>
+<pre class="r"><code>names(df)  </code></pre>
+<pre><code>## [1] &quot;my_unis&quot;    &quot;my_letters&quot;</code></pre>
+<pre class="r"><code>names(df)[2]&lt;- &quot;my_LETTERS&quot;
+names(df)</code></pre>
+<pre><code>## [1] &quot;my_unis&quot;    &quot;my_LETTERS&quot;</code></pre>
 </div>
 
 
