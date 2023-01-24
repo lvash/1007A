@@ -126,7 +126,8 @@ January 26 | [TBA]() | [TBA]()
 
 **Resources:**
 
-* [TBA]()  
+* [`viridis` package vignette](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)  
+* [Colors in R PDF](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
 
 <div id='id-section5'/>   
 ## Week 5: Data analysis
