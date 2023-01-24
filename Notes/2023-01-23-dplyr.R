@@ -87,10 +87,10 @@ starwarsClean[,1:11]
 ### Rearrange columns
 select(starwarsClean, name, gender, species, everything()) #everything() helper function; useful if you have a couple variables you want to move to the beginning
 
-# contains() helper function
+# contains() helper function 
 select(starwarsClean, contains("color")) #others include: ends_with(), starts_with(), num_range()
 
-# select can also rename columns
+# select can also rename columns 
 select(starwarsClean, haircolor = hair_color) #returns only renamed column #can use everything() too
 rename(starwarsClean, haircolor = hair_color) # returns whole df
 
