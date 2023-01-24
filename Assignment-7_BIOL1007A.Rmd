@@ -1,5 +1,5 @@
 ---
-title: "Assignment 6"
+title: "Assignment 7"
 author: "BIOL1007A"
 date: "`r Sys.Date()`"
 output: html_document
@@ -18,7 +18,7 @@ editor_options:
 
 2. Clean your data set: only include observations/rows that do not have an `NA` in the height column. Then, use `dplyr` to print a summary table showing the mean, median, and standard deviation of height for **each species.** 
 
-3. Create a box plot figure that shows the variation in heights among Star Wars species. Do the values in your summary table line up with the plot? Code so that each box plot (Species) is be filled with a different color. Change your axes labels so that species is capitalized and height is capitalized and shows units (cm). Use the theme_minimal option. Then look into the `annotate` or `geom_text` functions and add the text "p=1.2E-0.5" to the top right corner. 
+3. Create a box plot figure that shows the variation in heights among Star Wars species. Do the values in your summary table line up with the plot? Code so that each box plot (Species) is be filled with a different color. Change your axes labels so that species is capitalized and height is capitalized and shows units (cm). Use a different theme option. Then look into the `annotate` or `geom_text` functions and add the text "p=1.2E-0.5" to the top right corner. 
 
 *For an extra (optional) challenge:* overlay the data points onto the box plots (hint: look into `geom_jitter` or `geom_point`). See if you can change the color of the points, depending on the gender or sex variables.  
 
