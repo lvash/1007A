@@ -41,8 +41,9 @@ qplot(x=x_trt, y=y_resp, geom="col", fill=I(c("forestgreen", "#00008B", "goldenr
 ##### ggplot: uses dataframes instead of vectors
 
 p1 <- ggplot(data=d, mapping=aes(x=displ, y=cty, color = cyl)) + 
-  geom_point()
-p1
+  geom_point() +
+  theme_bw()
+p1 + annotate(geom="text",label="P>0.05", x=6, y=32)
 
 p1 + theme_base()
 p1 + theme_bw()

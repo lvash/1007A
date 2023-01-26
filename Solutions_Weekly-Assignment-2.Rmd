@@ -1,0 +1,40 @@
+---
+title: "Solutions Weekly Assignment 2"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+set.seed(123)
+simData <- function(mean1=10, sd1=1.5, mean2=45, sd2=2, n=25){
+  
+  Type <- rep(c("Control", "Treatment"), each = n)
+  Value <- c(rnorm(n, mean = mean1, sd = sd1), rnorm(n, mean = mean2, sd = sd2))
+  dframe <- data.frame(Type, Value)
+  return(dframe)
+}
+
+data<-simData()
+
+head(data)
+```
+
+```{r}
+myPval <- function(df=NULL){
+  
+  test <- aov(Value ~ Type, data=df)
+  testSummary <- summary(test)
+  p_value <- testSummary[[1]][["Pr(>F)"]][1]
+  return(p_value)
+}
+
+myPval(df=data)
+
+```
+
+```{r}
+## you can put your simulate data function in you p-value function
+myPval(simData())
+```
+

@@ -1,0 +1,58 @@
+---
+title: "Assignment 8"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Code Reflection
+1. Go through your recent assignments and the posted solutions ([Assignment 6 posted solutions](Assignment-6-dplyr_solutions.html) and [Weekly Assignment 2 solutions](Solutions_Weekly-Assignment-2.html)) - compare your code to the posted code. 
+
+* Can you run your simulated data function with new values for the means? If not, what do you need to change about your code?  
+* Are there differences between the posted code and yours? Did you notice you were missing anything?  
+* Make sure you annotate your code using `#` and leave brief descriptions of your thought process. 
+
+
+### Code annotation
+
+2. I used `dryad` data to reconstruct a publication-quality figure. Copy my code into an Rmd file and annotate what each `ggplot` line of code is doing, including any arguments. You can use a combination of googling and 'trial/error coding:' change the arguments/options to visually see how it affects the plot. 
+
+
+```{r warning=F, message=F}
+
+## Set up libraries
+library(tidyverse)
+library(ggthemes)
+
+
+# Data obtained from Veysey Powell and Babbitt 2016: An experimental test of buffer utility as a technique for managing pool-breeding amphibians https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.547rp
+
+dryadData <- read.table("Data/veysey-babbitt_data_amphibians.csv", header=TRUE, sep=",", stringsAsFactors = TRUE)
+
+# glimpse(dryadData)
+# head(dryadData)
+# table(dryadData$species)
+
+dryadData$species<-factor(dryadData$species, labels=c("Spotted Salamander", "Wood Frog")) #creating 'labels' to use for the plot
+
+#class(dryadData$treatment)
+dryadData$treatment <- factor(dryadData$treatment, 
+            levels=c("Reference",
+                     "100m", "30m"))
+
+
+p<- ggplot(data=dryadData, 
+       aes(x=interaction(wetland, treatment), 
+           y=count.total.adults, fill=factor(year))) + geom_bar(position="dodge", stat="identity", color="black") +
+  ylab("Number of breeding adults") +
+  xlab("") +
+  scale_y_continuous(breaks = c(0,100,200,300,400,500)) +
+  scale_x_discrete(labels=c("30 (Ref)", "124 (Ref)", "141 (Ref)", "25 (100m)","39 (100m)","55 (100m)","129 (100m)", "7 (30m)","19 (30m)","20 (30m)","59 (30m)")) +
+  facet_wrap(~species, nrow=2, strip.position="right") +
+  theme_few() + scale_fill_grey() + 
+  theme(panel.background = element_rect(fill = 'gray94', color = 'black'), legend.position="top",  legend.title= element_blank(), axis.title.y = element_text(size=12, face="bold", colour = "black"), strip.text.y = element_text(size = 10, face="bold", colour = "black")) + 
+  guides(fill=guide_legend(nrow=1,byrow=TRUE)) 
+
+p
+```
+

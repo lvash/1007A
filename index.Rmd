@@ -122,7 +122,9 @@ Date  | Lecture | Assignment
 --------- | ------------------ | ---------
 January 23 | [`dplyr` Lecture Notes](Lecture-6_BIOL1007A.html) | [Assignment 6](Assignment-6_BIOL1007A.html)
 January 24 | [`ggplot2`](Lecture-7_BIOL1007A.html) | [Assignment 7](Assignment-7_BIOL1007A.html)
-January 26 | [TBA]() | [TBA]()
+January 26 | [**Loading Data** Lecture Notes](Lecture-8_BIOL1007A.html) | [Assignment 8](Assignment-8_BIOL1007A.html)
+
+## [Weekly Assignment 3](Weekly-Assignment-3.html)
 
 **Resources:**
 

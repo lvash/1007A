@@ -1,0 +1,103 @@
+---
+title: "Assignment 6 `dplyr` Solutions"
+author: "BIOL1007A"
+date: "Winter 2023"
+output: html_document
+---
+
+## Data manipulations using the dplyr package
+
+##### This homework assignment focus on data manipulation in R. Complete these problems using the dplyr package, and if you have time, try each of these exercises using the subsetting methods in base R that have been covered in lecture. 
+
+
+#### 1. Examine the structure of the iris dataset. How many observations and variables are in the dataset?
+
+```{r warning=F, message=F}
+library(dplyr)
+data(iris)
+glimpse(iris) #or str(iris)
+
+```
+
+#### **The dataset has 150 observations and 5 variables.**   
+  
+  
+#### 2. Create a new data frame `iris1` that contains only the species *virginica* and *versicolor* with sepal lengths longer than 6 cm and sepal widths longer than 2.5 cm. How many observations and variables are in the dataset?
+
+```{r}
+iris1 <- filter(iris, Species %in% c("virginica", "versicolor"), Sepal.Length > 6, Sepal.Width > 2.5)
+# or iris1 <- filter(iris, Species == "virginica" | Species == "versicolor", Sepal.Length > 6, Sepal.Width > 2.5)
+glimpse(iris1)
+
+```
+
+#### **The dataset `iris1` now has 56 observations and 5 variables.**
+
+
+#### 3. Now, create an `iris2` data frame from `iris1` that contains only the columns for Species, Sepal.Length, and Sepal.Width. How many observations and variables are in the dataset?
+
+```{r}
+iris2 <- select(iris1, Species, Sepal.Length, Sepal.Width)
+glimpse(iris2)
+
+```
+#### **The dataset `iris2` now has 56 observations and 3 variables.**
+
+#### 4. Create an `iris3` data frame from `iris2` that orders the observations from largest to smallest sepal length. Show the first 6 rows of this dataset.
+
+```{r}
+
+iris3 <- arrange(iris2, desc(Sepal.Length))
+head(iris3)
+  
+```
+
+#### 5. Create an `iris4` data frame from `iris3` that creates a column with a sepal area (length * width) value for each observation. How many observations and variables are in the dataset?
+
+```{r}
+
+iris4 <- mutate(iris3, Sepal.Area = Sepal.Length * Sepal.Width)
+glimpse(iris4)
+  
+```
+#### **The dataset `iris4` now has 56 observations and 4 variables.**   
+ 
+#### 6. Create `irisTab` that calculates the average sepal length, the average sepal width, and the sample size of the entire iris4 data frame and print `irisTab`.
+
+```{r}
+irisTab <- summarize(iris4, avg.Sepal.Length = mean(Sepal.Length), avg.Sepal.Width = mean(Sepal.Width), Sample.Size = n())
+print(irisTab)
+```
+
+#### 7. Finally, create `iris5` that calculates the average sepal length, the average sepal width, and the sample size for each species of in the `iris4` data frame and print `iris5`.
+
+```{r}
+. <- group_by(iris4, Species)
+iris5<- summarize(., avg.Sepal.Length = mean(Sepal.Length), avg.Sepal.Width = mean(Sepal.Width), Sample.Size = n())
+print(iris5)
+
+```
+
+#### 8. In these exercises, you have successively modified different versions of the data frame to create `iris1` `iris2` `iris3` `iris4` and `iris5`. At each stage, the output data frame from one operation serves as the input for the next. A more efficient way to do this is to use the pipe operator %>%. See if you can rework all of your previous statements into an extended piping operation that uses iris as the input and generates irisFinal as the output.    
+```{r}
+irisFinal <- iris %>% 
+    filter(Species %in% c("virginica", "versicolor"), Sepal.Length > 6, Sepal.Width > 2.5) %>%
+    select(Species, Sepal.Length, Sepal.Width) %>%
+    arrange(desc(Sepal.Length)) %>%
+    mutate(Sepal.Area = Sepal.Length * Sepal.Width) %>%
+    group_by(Species) %>%
+    summarize(avg.Sepal.Length = mean(Sepal.Length), avg.Sepal.Width = mean(Sepal.Width), Sample.Size = n())
+
+irisFinal
+### To make the calculations more suitable for piping, we would also want to use our mutated column for our summary and then arrange the final product:
+iris %>% 
+    filter(Species %in% c("virginica", "versicolor"), Sepal.Length > 6, Sepal.Width > 2.5) %>%
+    select(Species, Sepal.Length, Sepal.Width) %>%
+    mutate(Sepal.Area = Sepal.Length * Sepal.Width) %>%
+    group_by(Species) %>%
+    summarize(avg.Sepal.Length = mean(Sepal.Length), avg.Sepal.Width = mean(Sepal.Width), avg.Sepal.Area = mean(Sepal.Area), Sample.Size = n()) %>%
+    arrange(desc(avg.Sepal.Area)) 
+    
+```
+
+

@@ -1,0 +1,289 @@
+---
+title: "Lecture 8: Loading Data"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Write a table
+```{r eval=F}
+write.table(x=my_data,
+            file="Path/To/OutputFileName.csv",
+            HEADER=TRUE,
+            sep=",")
+```
+
+
+## Read in a table
+```{r eval=F}
+my_data <- read.table(file="path/to/data.csv",
+                    header=TRUE,
+                    sep=",",
+                    comment.char="#")
+
+```
+
+## `saveRDS()`: useful when you're working only in R
+
+```{r eval=F}
+saveRDS(my_data, file="Path/To/FileName.RDS") # .RDS suffix is not required, but good for clarity
+
+#This only saves a single R object as a binary, but remember, you can bundle up many things into a single list!
+```
+
+## `readRDS()`
+
+```{r eval=F}
+#Use readRDS() to restore it.
+data_in <-readRDS("FileName.RDS") 
+```
+
+
+## 'Long' vs 'Wide' data format: 
+- A wide format contains values that do not repeat in the ID column. A long format contains values that do repeat in the ID column.  
+- sometimes data is collected and entered one way, but needed in a different format for analysis and plotting
+
+### the `pivot_longer()` function in the `tidyr` package makes datasets longer by increasing the number of rows and decreasing the number of columns. 
+
+```{r eval=F}
+library(tidyverse) 
+
+#billboard rank of songs in the year 2000
+head(billboard)
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"), #specify which columns you want to make 'longer'
+    names_to = "week", #name of new column of header names
+    values_to = "rank", #name of new column of cell values
+    values_drop_na = TRUE
+  )
+```
+
+### `pivot_wider()` "widens" data, increasing the number of columns and decreasing the number of rows.
+
+```{r eval=F}
+head(fish_encounters) 
+table(fish_encounters$seen) 
+# create an occupancy matrix  
+head(fish_encounters)
+fish_encounters %>%
+  pivot_wider(names_from = station, #which column would you like to turn into multiple columns
+              values_from = seen) #which column contains the values for the new columns
+# Fill in missing values with 0s
+fish_encounters %>%
+  pivot_wider(names_from = station, values_from = seen, values_fill = 0)
+
+```
+
+
+
+## Publicly available data through Dryad
+#### a curated resource that makes research data discoverable, freely reusable, and citable.  
+#### You can explore data sets here: https://datadryad.org/search
+
+```{r eval=F}
+# Data obtained from Veysey Powell and Babbitt 2016: An experimental test of buffer utility as a technique for managing pool-breeding amphibians https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.547rp
+
+dryadData <- read.table("Data/veysey-babbitt_data_amphibians.csv", header=TRUE, sep=",", stringsAsFactors = TRUE)
+
+glimpse(dryadData)
+head(dryadData)
+table(dryadData$species)
+summary(dryadData$mean.hydro)
+```
+
+
+## Analyses
+
+### Archetype Experimental Designs
+- independent versus dependent variables
+- discrete versus continuous variables
+- continuous variables (integer and real)
+- direction of cause and effect, x axis is independent
+- continuous versus discrete (natural or arbitrary or statistical bins)
+
+### Regression (dependent: continuous, independent: continuous)
+- linear model of $y = a + bx$
+- statistical tests for null of hypothesis of slope and/or intercept = 0
+- confidence and prediction intervals of uncertainty
+- goodness of fit tests for linearity
+
+
+## Basic linear regression analysis in R (using 2 continuous variables)
+#### Is there a relationship between mean pool hydroperiod and number of breeding frogs caught?
+
+```{r eval=F}
+# model y (response) ~ x (explanatory)
+regModel <- lm(count.total.adults~mean.hydro,data=dryadData)
+# model output
+regModel # printed output is sparse
+#View(summary(regModel)) # you can expand table to get coefficients code
+head(regModel$residuals)
+hist(regModel$residuals) 
+# contains residuals
+# 'summary' of model has elements
+summary(regModel) # p=3.27e-06
+
+summary(regModel)[["r.squared"]]
+summary(regModel)$"r.squared"
+
+summary(regModel)$coefficients
+
+# best to examine entire matrix of coefficients:
+summary(regModel)$coefficients[] #shows all
+summary(regModel)$coefficients[2,1]   # slope estimate of the relationship
+
+```
+
+
+### Basic ggplot of regression model
+
+```{r eval=F}
+regPlot <- ggplot(data=dryadData,aes(x=mean.hydro,y=count.total.adults)) +
+           geom_point() +
+          stat_smooth(method=lm,se=0.99) # default se=0.95 
+regPlot + theme_few()
+# ggsave(filename="Plot1.pdf",plot=regPlot,device="pdf")
+```
+
+### Basic ANOVA in R
+#### Was there a statistically signficant difference in the number of adults among years?
+
+```{r eval=F}
+# y~x 
+ANOmodel <- aov(count.total.adults~factor(wetland),data=dryadData)
+print(ANOmodel)
+summary(ANOmodel)
+
+dryadData %>%
+  group_by(wetland) %>%
+  summarise(avgHydro = mean(count.total.adults, na.rm=T), n=n())
+
+```
+
+
+### Basic ggplot of ANOVA data
+
+```{r eval=F}
+## we need to let R know that our wetland variable is categorical and not numeric
+class(dryadData$wetland)
+dryadData$wetland <-factor(dryadData$wetland)
+class(dryadData$wetland)
+ANOPlot <- ggplot(data=dryadData,aes(x=wetland,y=count.total.adults)) +
+           geom_boxplot()
+ANOPlot
+
+
+wetlandSpCount <- ggplot(data=dryadData,aes(x=wetland,y=count.total.adults, fill=species)) +
+           geom_boxplot() + scale_fill_grey()
+
+# ggsave(filename="Plot2.pdf",plot=wetlandSpCount,device="pdf")
+```
+
+
+### Data frame construction for logistic regression
+```{r eval=F}
+xVar <- sort(rgamma(n=200,shape=5,scale=5))
+yVar <- sample(rep(c(1,0),each=100),prob=seq_len(200))
+lRegData <- data.frame(xVar,yVar)
+```
+
+### Logistic regression analysis in R
+
+```{r eval=F}
+lRegModel <- glm(yVar ~ xVar,
+                 data=lRegData,
+                 family=binomial(link=logit))
+summary(lRegModel)
+summary(lRegModel)$coefficients
+```
+
+### Basic ggplot of logistic regression
+```{r eval=F}
+lRegPlot <- ggplot(data=lRegData, aes(x=xVar,y=yVar)) +
+            geom_point() +
+            stat_smooth(method=glm, method.args=list(family=binomial))
+print(lRegPlot)
+   
+```
+
+### Data for contingency table analysis
+## Counts of males and females
+```{r eval=F}
+
+countData<- dryadData %>%
+  group_by(species) %>%
+  summarize(Males=sum(No.males, na.rm=T), Females=sum(No.females, na.rm=T)) %>%
+  select(-species) %>%
+  as.matrix() 
+
+row.names(countData)=c("SS","WF")
+countData
+
+```
+
+### Basic contingency table analysis in R
+
+```{r eval=F}
+print(chisq.test(countData))
+```
+
+### Plotting contingency table analyses
+
+```{r eval=F}
+# some simple plots using baseR
+mosaicplot(x=countData,
+           col=c("goldenrod","grey"),
+           shade=FALSE)
+
+countDataLong <- countData %>%
+  as_tibble() %>%
+  mutate(Species=c(rownames(countData))) %>%
+  pivot_longer(cols=Males:Females,
+               names_to = "Sex",
+               values_to = "Count")
+ggplot(countDataLong, aes(x=Species, y=Count, fill=Sex)) +
+  geom_bar(stat="identity", position="dodge") +
+  scale_fill_manual(values=c("black", "darkslateblue"))
+```
+
+
+### ggplot reconstruction
+
+```{r message=F, warning =F}
+# Data obtained from Veysey Powell and Babbitt 2016: An experimental test of buffer utility as a technique for managing pool-breeding amphibians https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.547rp
+library(tidyverse)
+library(ggthemes)
+
+dryadData <- read.table("Data/veysey-babbitt_data_amphibians.csv", header=TRUE, sep=",", stringsAsFactors = TRUE)
+
+glimpse(dryadData)
+head(dryadData)
+table(dryadData$species)
+
+dryadData$species<-factor(dryadData$species, labels=c("Spotted Salamander", "Wood Frog")) #creating 'labels' to use for the plot
+
+class(dryadData$treatment)
+dryadData$treatment <- factor(dryadData$treatment, 
+            levels=c("Reference",
+                     "100m", "30m"))
+
+
+p<- ggplot(data=dryadData, 
+       aes(x=interaction(wetland, treatment), 
+           y=count.total.adults, fill=factor(year))) + geom_bar(position="dodge", stat="identity", color="black") +
+  ylab("Number of breeding adults") +
+  xlab("") +
+  scale_y_continuous(breaks = c(0,100,200,300,400,500)) +
+  scale_x_discrete(labels=c("30 (Ref)", "124 (Ref)", "141 (Ref)", "25 (100m)","39 (100m)","55 (100m)","129 (100m)", "7 (30m)","19 (30m)","20 (30m)","59 (30m)")) +
+  facet_wrap(~species, nrow=2, strip.position="right") +
+  theme_few() + scale_fill_grey() + 
+  theme(panel.background = element_rect(fill = 'gray94', color = 'black'), legend.position="top",  legend.title= element_blank(), axis.title.y = element_text(size=12, face="bold", colour = "black"), strip.text.y = element_text(size = 10, face="bold", colour = "black")) + 
+  guides(fill=guide_legend(nrow=1,byrow=TRUE)) 
+
+p
+```
+
