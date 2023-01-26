@@ -18,7 +18,7 @@ output: html_document
 2. I used `dryad` data to reconstruct a publication-quality figure. Copy my code into an Rmd file and annotate what each `ggplot` line of code is doing, including any arguments. You can use a combination of googling and 'trial/error coding:' change the arguments/options to visually see how it affects the plot. 
 
 
-```{r warning=F, message=F}
+```{r warning=FALSE, message=FALSE}
 
 ## Set up libraries
 library(tidyverse)
