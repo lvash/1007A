@@ -8,9 +8,9 @@ output: html_document
 ### Code Reflection
 1. Go through your recent assignments and the posted solutions ([Assignment 6 posted solutions](Assignment-6-dplyr_solutions.html) and [Weekly Assignment 2 solutions](Solutions_Weekly-Assignment-2.html)) - compare your code to the posted code. 
 
-* Can you run your simulated data function with new values for the means? If not, what do you need to change about your code?  
+* Can you run your simulated data function (from Weekly Assignment 2) with new values for the means? Insert and run that code here. If it does not run, what do you need to change about your code?  
 * Are there differences between the posted code and yours? Did you notice you were missing anything?  
-* Make sure you annotate your code using `#` and leave brief descriptions of your thought process. 
+* Make sure you annotate your original code using `#` to mark any differences and leave brief descriptions of your thought process. 
 
 
 ### Code annotation
