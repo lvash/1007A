@@ -63,6 +63,8 @@ class(dryadData$treatment)
 dryadData$treatment <- factor(dryadData$treatment, 
                               levels=c("Reference",
                                        "100m", "30m"))
+
+library(ggthemes)
 p<- ggplot(data=dryadData, 
            aes(x=interaction(wetland, treatment), #group treatment and wetland
                y=count.total.adults, fill=factor(year))) + geom_bar(position="dodge", stat="identity", color="black") +

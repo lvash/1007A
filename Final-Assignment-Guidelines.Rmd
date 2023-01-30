@@ -1,0 +1,38 @@
+---
+title: "Final Project Guidelines"
+author: "BIOL1007A"
+date: "Winter 2023"
+output: html_document
+---
+
+## Final Assignment: 20 points
+
+### HTML document (10 points)
+
+Create and post an html file on your portfolio page that documents your final project. 
+
+1. Include a brief description on what it is and why you chose it. 
+2. Include the steps you took to create it so that someone could learn from it (code? troubleshooting? relevant links? etc.). 
+3. The final product should be an organized, informative, substantive (i.e. show me what you've learned!) blog post or tutorial
+
+### Presentation (10 points)  
+
+Prepare a **5 minute** presentation that highlights and summarizes your work and share it with the class. Instead of a PowerPoint, I would like a prepared demonstration - i.e.:  
+- show websites,  
+- run or edit some example code with the class (if applicable),  
+- show the steps you had to take,  
+- and of course, your final product.  
+
+Full credit will be given to clear, practiced presentations that stay within the 5 minute time limit. There will be a 2 minute grace window, but points will be deducted for any presentations longer than 7 minutes.
+
+### Example Topics  
+
+* Present on packages or functions that we did not cover in class; examples include: `knitr`, `ggmaps`, `plotly`, `gt`, `leaflet`, `ggiraph`, `caret`, `sf`, `tidymodels`    
+* Present on a computational tool or program we did not cover in lecture: Beamer, R Shiny, LaTeX or Overleaf, Sweave, GitHub Desktop   
+* Create a personal website (`yourusername.github.io`) and customize it  
+* Download a publicly available data set and reproduce figures and/or an analysis from an article.   
+* Simulate data and create more complex ggplots and/or statistical analyses   
+* Re-do a previous BIO 140 or BIO 145 lab analysis with R instead of Excel.  
+
+
+

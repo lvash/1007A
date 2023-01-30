@@ -1,0 +1,12 @@
+---
+title: "Assignment 9"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+1. Using a `for` loop and an `if` statement, write a function to calculate the number of zeroes in a numeric vector. Before entering the loop, set up a vector of integers with some zero values. Then, set up a counter variable `counter <- 0`. Inside the loop, add 1 to counter each time you have a zero in the vector. Finally, use `return(counter)` for the output.
+
+2. Write a function that takes as input two integers representing the number of rows and columns in a matrix. The output is a matrix of these dimensions in which each element is the product of the row number x the column number.
+
+3. Use a `for` loop to repeat your previous functions from Weekly Assignment 2 (which simulate a data frame and extract a p-value) 100 times. Store the results in a data frame that has 1 column indicating the replicate number and 1 column for the p-values (a total of 2 columns and 100 rows).

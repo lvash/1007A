@@ -1,0 +1,44 @@
+---
+title: "Creating a personal website"
+author: "BIOL1007A"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Create a specifically named GitHub repository
+
+1. Head over to [GitHub](https://www.github.com) and create a new public repository named `username.github.io`, where username is your GitHub username.  
+2. Use Terminal (does not have to be within RStudio) to clone (download) the repository to your computer: ```git clone https://github.com/username/username.github.io```  
+
+### Find and download a website template
+
+3. Find a GitHub website template. For example, jekyll themes have free options here [](). Choose one that is well-documented. For example, the [Clean Blog jekyll theme](https://jekyllthemes.io/theme/startbootstrap-clean-blog-jekyll) has a well organized GitHub repository [here](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll).  
+4. There are ways to fork the theme using a software called `RubyGems` through Terminal, but the easiest way is to simply go to the repo, click its green `< > Code` button, and select Download ZIP.  
+5. Unzip the file and copy and paste the items within the folder to your new repository's (`username.github.io`) folder. 
+6. Add, commit, and push your changes through Terminal or RStudio (if you want to set up a project file like we did for class)   
+7. Navigate to the Settings of your new GitHub repo, go to the Pages tab, and switch the branch from None to main  
+8. You should now see the default template when you go to `https://www.yourusername.github.io`  
+
+### Edit the default theme by exploring the files
+
+9. Edit relevant files to customize your page. This step is theme specific, but the `config.yml` file is the best place to start. A well-documented theme will list what to change. For example, the [Clean Blog template's GitHub](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) repo states to change the following settings in the config.yml file:
+
+```
+* baseurl
+* url
+* title
+* email (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
+* description
+* author
+* twitter_username (Optional)
+* facebook_username (Optional)
+* github_username (Optional)
+* linkedin_username (Optional)
+* instagram_username (Optional)
+```
+
+10. You can open and edit the html and yml files with a plain text editor. [Notepad ++](https://notepad-plus-plus.org/downloads/) is a good option for Windows users and [BBedit](https://www.barebones.com/products/bbedit/) (the **free** version) is a good option for Mac users.   
+11. The best way to determine which settings and code change your website is through trial and error. If the template page has "Welcome to my webpage" on its home page, see where you can find that text in the files.  
+12. Edit the files and code, git add commit and push, see what changes were made on the website, and repeat.  
+
+

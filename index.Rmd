@@ -124,7 +124,7 @@ January 23 | [`dplyr` Lecture Notes](Lecture-6_BIOL1007A.html) | [Assignment 6](
 January 24 | [`ggplot2`](Lecture-7_BIOL1007A.html) | [Assignment 7](Assignment-7_BIOL1007A.html)
 January 26 | [**Loading Data** Lecture Notes](Lecture-8_BIOL1007A.html) | [Assignment 8](Assignment-8_BIOL1007A.html)
 
-## [Weekly Assignment 3](Weekly-Assignment-3.html)
+### [Weekly Assignment 3](Weekly-Assignment-3.html)
 
 **Resources:**
 
@@ -137,10 +137,14 @@ January 26 | [**Loading Data** Lecture Notes](Lecture-8_BIOL1007A.html) | [Assig
 
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
-January 30 | [TBA]() | [TBA]()
+January 30 | [Analysis and Control Structures](Lecture-9_BIOL1007A.html) | [Assignment 9](Assignment-9_BIOL1007A.html)
 January 31 | [TBA]() | [TBA]()
 February 2  | [TBA]() | [TBA]()
 
+### [Weekly Assignment 4](Weekly-Assignment-4.html)  
+
+### [Final Assignment](Final-Assignment-Guidelines.html)
+
 **Resources:**
 
-* [TBA]()  
+* [Creating a GitHub Website](GitHub-website-steps.html)   
