@@ -138,7 +138,7 @@ January 26 | [**Loading Data** Lecture Notes](Lecture-8_BIOL1007A.html) | [Assig
 Date  | Lecture | Assignment
 ------------- |----------- | -------------
 January 30 | [Analysis and Control Structures](Lecture-9_BIOL1007A.html) | [Assignment 9](Assignment-9_BIOL1007A.html)
-January 31 | [TBA]() | [TBA]()
+January 31 | Catch-up day | -
 February 2  | [TBA]() | [TBA]()
 
 ### [Weekly Assignment 4](Weekly-Assignment-4.html)  
