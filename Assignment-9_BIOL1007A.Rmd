@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-1. Using a `for` loop and an `if` statement, write a function to calculate the number of zeroes in a numeric vector. Before entering the loop, set up a vector of integers with some zero values. Then, set up a counter variable `counter <- 0`. Inside the loop, add 1 to counter each time you have a zero in the vector. Finally, use `return(counter)` for the output.
+1. Using a `for` loop and an `if` statement, calculate the number of zeroes in a numeric vector. Before entering the loop, set up a vector of integers with some zero values. Then, set up a counter variable `counter <- 0`. Inside the loop, add 1 to counter each time you have a zero in the vector. Finally, use `print(counter)` for the output. For an extra, optional challenge create a function to do the same thing.
 
 2. Write a function that takes as input two integers representing the number of rows and columns in a matrix. The output is a matrix of these dimensions in which each element is the product of the row number x the column number.
 
